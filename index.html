@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nails & Makeup Studio - Belleza Premium</title>
+  <title>Nails & Makeup Studio - Elite Beauty Experiencie</title>
   
-  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display & Inter -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Tailwind Configuration for customized brand style -->
+  
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-          },
-          colors: {
-            studio: {
-              pink: '#F8C8DC',
-              'pink-hover': '#F29AB5',
-              dark: '#2A2A2A',
-              gray: '#6B6B6B',
-            }
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
           }
         }
       }
@@ -41,77 +31,80 @@
   <style>
     body {
       background-color: #FDFBFB;
-      color: #333333;
+      color: #1F2937;
       overflow-x: hidden;
     }
-
-    /* Neomorphism smooth soft custom forms + cards */
+    
+    /* Neomorphism Soft UI styles */
     .neo-card {
-      background: #FFFFFF;
-      box-shadow: 8px 8px 24px rgba(212, 185, 198, 0.22), 
-                  -8px -8px 24px rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(248, 200, 220, 0.25);
-      border-radius: 20px;
-    }
-
-    .neo-card-hover {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .neo-card-hover:hover {
-      transform: translateY(-4px) scale(1.01);
-      box-shadow: 12px 12px 32px rgba(212, 185, 198, 0.3), 
-                  -12px -12px 32px rgba(255, 255, 255, 1);
-      border-color: rgba(242, 154, 181, 0.4);
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 12px 12px 30px rgba(212, 185, 198, 0.18), 
+                  -10px -10px 25px rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(244, 143, 177, 0.25);
+      border-radius: 24px;
     }
 
     .neo-input {
       background: #FFFFFF;
-      box-shadow: inset 4px 4px 10px rgba(212, 185, 198, 0.15), 
-                  inset -4px -4px 10px rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(248, 200, 220, 0.15);
+      box-shadow: inset 4px 4px 10px rgba(212, 185, 198, 0.12), 
+                  inset -4px -4px 10px rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(244, 143, 177, 0.15);
       transition: all 0.3s ease;
     }
 
     .neo-input:focus {
-      border-color: rgba(242, 154, 181, 0.6);
-      box-shadow: inset 2px 2px 6px rgba(212, 185, 198, 0.1), 
-                  inset -2px -2px 6px rgba(255, 255, 255, 0.9),
-                  0 0 10px rgba(248, 200, 220, 0.3);
+      border-color: rgba(244, 143, 177, 0.5);
+      box-shadow: inset 2px 2px 6px rgba(212, 185, 198, 0.08), 
+                  0 0 12px rgba(244, 143, 177, 0.25);
       outline: none;
     }
 
     .neo-btn {
       background: #FFFFFF;
-      border: 1px solid rgba(248, 200, 220, 0.5);
-      box-shadow: 4px 4px 12px rgba(212, 185, 198, 0.2), 
+      border: 1px solid rgba(244, 143, 177, 0.4);
+      box-shadow: 4px 4px 12px rgba(212, 185, 198, 0.18), 
                   -4px -4px 12px rgba(255, 255, 255, 0.9);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .neo-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 2px 2px 6px rgba(212, 185, 198, 0.15), 
-                  -2px -2px 6px rgba(255, 255, 255, 0.9);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .neo-btn-primary {
-      background: linear-gradient(135deg, #FDF7F9 0%, #FAEDF2 100%);
-      border: 1px solid rgba(242, 154, 181, 0.4);
-      box-shadow: 4px 4px 12px rgba(212, 185, 198, 0.25), 
-                  -4px -4px 12px rgba(255, 255, 255, 0.9);
+      background: linear-gradient(135deg, #FFF8FA 0%, #FAEDF2 100%);
+      border: 1px solid rgba(244, 143, 177, 0.45);
+      box-shadow: 6px 6px 15px rgba(212, 185, 198, 0.25), 
+                  -6px -6px 15px rgba(255, 255, 255, 0.9);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .neo-btn-primary:hover {
       transform: translateY(-2px);
       background: linear-gradient(135deg, #FAEDF2 0%, #F8C8DC 100%);
-      border-color: rgba(242, 154, 181, 0.8);
-      box-shadow: 4px 4px 18px rgba(242, 154, 181, 0.35), 
-                  -4px -4px 18px rgba(255, 255, 255, 0.9);
+      border-color: rgba(244, 143, 177, 0.7);
+      box-shadow: 6px 6px 20px rgba(244, 143, 177, 0.32), 
+                  -6px -6px 20px rgba(255, 255, 255, 0.95);
     }
 
-    /* Custom Webkit scrollbar */
+    /* 3D Motion Soft Keyframes */
+    @keyframes floating-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(2deg); }
+    }
+    @keyframes floating-moderate {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-1.5deg); }
+    }
+    .float-slow {
+      animation: floating-slow 6s ease-in-out infinite;
+    }
+    .float-mod {
+      animation: floating-moderate 7s ease-in-out infinite;
+    }
+
+    /* 3D Tilt interactive setup */
+    [data-tilt="true"] {
+      transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
+      will-change: transform;
+    }
+    
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -120,200 +113,175 @@
     }
     ::-webkit-scrollbar-thumb {
       background: #F8C8DC;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #F29AB5;
-    }
-
-    /* Scrollbar-hide helper */
-    .scrollbar-none::-webkit-scrollbar {
-      display: none;
-    }
-    .scrollbar-none {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    /* 3D tilt smooth styling */
-    [data-tilt="true"] {
-      transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.15s ease;
-      transform-style: preserve-3d;
-      will-change: transform;
-    }
-
-    @keyframes gentle-pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.03);
-      }
-    }
-    .animate-gentle-pulse {
-      animation: gentle-pulse 2.2s ease-in-out infinite;
+      border-radius: 9px;
     }
   </style>
 </head>
-<body class="relative min-h-screen bg-[#FDFBFB] font-sans antialiased text-studio-dark">
+<body class="relative min-h-screen bg-[#FDFBFB] font-sans antialiased text-gray-800">
 
-  <!-- FLOTANTE GLOW BACKGROUND DECORATION -->
-  <div class="absolute top-20 left-0 right-0 h-[600px] pointer-events-none overflow-hidden -z-10">
-    <div class="absolute top-1/4 left-10 w-96 h-96 rounded-full bg-pink-100/40 blur-[100px]"></div>
-    <div class="absolute top-1/3 right-10 w-[400px] h-[400px] rounded-full bg-indigo-50/40 blur-[110px]"></div>
-  </div>
+  <!-- Glowing blobs -->
+  <div class="absolute top-10 left-[10%] w-72 h-72 rounded-full bg-pink-200/30 blur-[120px] animate-pulse pointer-events-none" style="animation-duration: 6s;"></div>
+  <div class="absolute top-32 right-[15%] w-80 h-80 rounded-full bg-rose-100/40 blur-[130px] animate-pulse pointer-events-none" style="animation-duration: 9s;"></div>
 
-  <!-- HEADER / NAVIGATION -->
-  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-pink-100/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- STICKY TOP NAVIGATION -->
+  <header class="sticky top-4 mx-auto max-w-7xl inset-x-0 z-40 px-4 sm:px-6 lg:px-8">
+    <div class="bg-white/75 backdrop-blur-xl border border-pink-100/50 rounded-full shadow-[0_10px_30px_-10px_rgba(244,143,177,0.15)] px-4 sm:px-8 py-3.5 flex items-center justify-between transition-all duration-300">
       
       <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center border border-pink-100 shadow-sm flex-shrink-0">
-          <i data-lucide="sparkles" class="w-5 h-5 text-pink-400"></i>
+      <div class="flex items-center gap-2.5 group cursor-pointer" onclick="document.body.scrollIntoView({behavior: 'smooth'})">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-100 to-rose-200 flex items-center justify-center border border-white shadow-inner flex-shrink-0 transition-transform duration-500 group-hover:rotate-180">
+          <i data-lucide="sparkles" class="w-5 h-5 text-rose-500"></i>
         </div>
         <div>
-          <span class="font-serif text-base sm:text-lg md:text-xl font-semibold tracking-wide text-gray-900 block leading-none">Nails & Makeup</span>
-          <span class="text-[9px] sm:text-xs block text-pink-400 font-medium tracking-widest uppercase mt-0.5">Estudio Premium</span>
+          <span class="font-serif text-sm sm:text-lg font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-rose-700 to-pink-600">Nails & Makeup</span>
+          <span class="text-[8px] sm:text-[10px] block text-pink-500 font-extrabold tracking-widest uppercase mt-0.5">Estudio Premium</span>
         </div>
       </div>
 
-      <!-- Links (Desktop) -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-studio-gray">
-        <a href="#services-section" class="hover:text-pink-500 transition-colors">Servicios</a>
-        <a href="#portfolio-section" class="hover:text-pink-500 transition-colors">Portafolio</a>
-        <a href="#about-section" class="hover:text-pink-500 transition-colors">Sobre el Estudio</a>
-        <a href="#testimonials-section" class="hover:text-pink-500 transition-colors">Testimonios</a>
+      <!-- Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-gray-600">
+        <a href="#services-section" class="hover:text-pink-600 transition-colors py-1 relative group">
+          Servicios <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#portfolio-section" class="hover:text-pink-600 transition-colors py-1 relative group">
+          Portafolio <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#about-section" class="hover:text-pink-600 transition-colors py-1 relative group">
+          Nosotros <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#testimonials-section" class="hover:text-pink-600 transition-colors py-1 relative group">
+          Opiniones <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-pink-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
       </nav>
 
-      <!-- CTA Botón -->
-      <div class="flex-shrink-0">
-        <a href="#booking-section" class="px-3 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold sm:font-semibold uppercase tracking-wider inline-flex items-center gap-1.5 neo-btn-primary text-pink-700 text-center shadow-sm">
-          <i data-lucide="calendar" class="w-3.5 h-3.5 text-pink-500"></i>
-          <span>Agendar</span>
-        </a>
-      </div>
+      <!-- Right CTA -->
+      <a href="#booking-section" class="px-5 py-2.5 rounded-full text-[9px] sm:text-[11px] font-bold uppercase tracking-widest neo-btn-primary text-pink-700 flex items-center gap-1.5 shadow-sm transform hover:scale-105 transition-transform">
+        <i data-lucide="calendar" class="w-3.5 h-3.5 text-pink-500 animate-pulse"></i>
+        <span>Reservar</span>
+      </a>
 
     </div>
   </header>
 
-  <!-- 1. HERO SECTION (PRIMER IMPACTO) -->
-  <section class="relative pt-8 pb-20 md:pt-16 md:pb-32 overflow-hidden z-10">
+  <!-- 1. HERO SECTION -->
+  <section class="relative pt-12 pb-24 md:pt-20 md:pb-36 overflow-hidden z-10" id="hero-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Left Column (Text & UX Highlights) -->
-        <div class="lg:col-span-7 flex flex-col justify-center space-y-8">
+        <!-- Left details -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-8 select-text">
           
-          <!-- Tag Premium -->
-          <div class="inline-flex self-start items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-100/60 shadow-sm">
-            <span class="w-1.5 h-1.5 rounded-full bg-pink-400 animate-ping"></span>
-            <span class="text-xs font-semibold text-pink-600 tracking-wider uppercase">Esthetic Luxury Studio</span>
+          <div class="inline-flex self-start items-center gap-2 px-4.5 py-2 rounded-full bg-white border border-pink-100 shadow-[0_4px_15px_-3px_rgba(244,143,177,0.12)]">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+            </span>
+            <span class="text-[10px] font-extrabold text-pink-600 tracking-widest uppercase">Estudio Boutique Exclusivo</span>
           </div>
 
-          <!-- Titles -->
           <div class="space-y-4">
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-gray-900 leading-tight tracking-tight">
-              Belleza que resalta tu <br />
-              <span class="relative">
-                <span class="relative z-10 italic text-pink-500">estilo natural</span>
-                <span class="absolute bottom-1 left-0 right-0 h-3 bg-pink-100/50 -rotate-1"></span>
+            <h1 class="font-serif text-4xl sm:text-6xl text-gray-900 leading-tight tracking-tight">
+              Revela la versión <br />
+              <span class="relative inline-block mt-2">
+                <span class="relative z-10 italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 font-medium">más radiante de ti</span>
+                <span class="absolute bottom-2 left-0 right-0 h-4 bg-pink-200/30 -rotate-1 rounded" />
               </span>
             </h1>
-            <p class="text-base sm:text-lg text-studio-gray max-w-xl font-light leading-relaxed">
-              Uñas, maquillaje y cuidado estético profesional con resultados limpios, elegantes y duraderos en un ambiente de absoluta paz y relajación.
+            <p class="text-sm sm:text-lg text-gray-600 max-w-xl font-light leading-relaxed">
+              Creamos obras de arte en tus uñas y maquillajes finos que sintonizan perfectamente con tu personalidad. Disfruta de un servicio impecable bajo un ambiente premium de absoluta relajación y confort.
             </p>
           </div>
 
-          <!-- Buttons -->
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <a href="#booking-section" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wide inline-block neo-btn-primary text-pink-700 text-center shadow-lg hover:shadow-pink-100">
-              Reservar cita
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="#booking-section" class="w-full sm:w-auto px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest neo-btn-primary text-pink-700 text-center shadow-[0_15px_30px_-5px_rgba(244,143,177,0.3)] hover:scale-105 active:scale-95 transition-all">
+              Agendar Cita ahora
             </a>
-            <a href="#portfolio-section" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wide inline-block neo-btn text-gray-700 text-center hover:bg-gray-50/50">
-              Ver portafolio
+            <a href="#portfolio-section" class="w-full sm:w-auto px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest neo-btn text-gray-700 text-center hover:bg-white hover:text-pink-600 hover:border-pink-200/50 hover:scale-105 active:scale-95 transition-all">
+              Explorar Diseños
             </a>
           </div>
 
-          <!-- Benefits Bullet points -->
-          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 pt-4 text-xs text-studio-gray font-medium">
+          <div class="flex flex-wrap gap-x-6 gap-y-3 pt-2 text-xs text-gray-600 font-semibold">
             <div class="flex items-center gap-2">
-              <span class="p-1 rounded-full bg-pink-50 text-pink-400"><i data-lucide="check" class="w-3.5 h-3.5"></i></span>
-              <span>Atención personalizada</span>
+              <span class="w-5 h-5 rounded-full bg-pink-50 text-pink-505 flex items-center justify-center border border-pink-100/50"><i data-lucide="check" class="w-3 h-3 text-pink-500"></i></span>
+              <span>Personalización al 100%</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="p-1 rounded-full bg-pink-50 text-pink-400"><i data-lucide="check" class="w-3.5 h-3.5"></i></span>
-              <span>Productos premium certificados</span>
+              <span class="w-5 h-5 rounded-full bg-pink-50 text-pink-505 flex items-center justify-center border border-pink-100/50"><i data-lucide="check" class="w-3 h-3 text-pink-500"></i></span>
+              <span>Esmaltado Semipermanente Orgánico</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="p-1 rounded-full bg-pink-50 text-pink-400"><i data-lucide="check" class="w-3.5 h-3.5"></i></span>
-              <span>Resultados profesionales</span>
+              <span class="w-5 h-5 rounded-full bg-pink-50 text-pink-505 flex items-center justify-center border border-pink-100/50"><i data-lucide="check" class="w-3 h-3 text-pink-500"></i></span>
+              <span>Bioseguridad Autoclavada</span>
             </div>
           </div>
 
-          <!-- Rating & Success metrics -->
+          <!-- Micro summaries -->
           <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-6 max-w-lg border-t border-pink-100/30">
-            <div class="p-2.5 sm:p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-pink-100/10 text-center">
-              <p class="text-xl sm:text-2xl font-bold font-serif text-gray-900">4.9</p>
-              <div class="flex justify-center gap-0.5 my-1 text-amber-400">
-                <i data-lucide="star" class="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-amber-400"></i>
-                <i data-lucide="star" class="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-amber-400"></i>
-                <i data-lucide="star" class="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-amber-400"></i>
-                <i data-lucide="star" class="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-amber-400"></i>
-                <i data-lucide="star" class="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-amber-400"></i>
+            <div class="p-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-pink-100/30 shadow-[4px_4px_15px_rgba(212,185,198,0.12)] text-center hover:scale-105 transition-transform duration-300">
+              <p class="text-2xl font-black font-serif text-gray-900 leading-none">4.9</p>
+              <div class="flex justify-center gap-0.5 my-1.5 text-amber-400">
+                <i data-lucide="star" class="w-2.5 h-2.5 fill-current"></i>
+                <i data-lucide="star" class="w-2.5 h-2.5 fill-current"></i>
+                <i data-lucide="star" class="w-2.5 h-2.5 fill-current"></i>
+                <i data-lucide="star" class="w-2.5 h-2.5 fill-current"></i>
+                <i data-lucide="star" class="w-2.5 h-2.5 fill-current"></i>
               </div>
-              <p class="text-[9px] sm:text-[10px] text-studio-gray tracking-wider uppercase font-semibold truncate">Valoración</p>
+              <p class="text-[9px] text-pink-600 tracking-widest uppercase font-bold">Valoración CABA</p>
             </div>
-            <div class="p-2.5 sm:p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-pink-100/10 text-center">
-              <p class="text-xl sm:text-2xl font-bold font-serif text-gray-900">+2.5k</p>
-              <p class="my-1 text-[10px] sm:text-xs text-pink-500 font-serif italic truncate">Clientes</p>
-              <p class="text-[9px] sm:text-[10px] text-studio-gray tracking-wider uppercase font-semibold truncate">Atendidos</p>
+            <div class="p-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-pink-100/30 shadow-[4px_4px_15px_rgba(212,185,198,0.12)] text-center hover:scale-105 transition-transform duration-300">
+              <p class="text-2xl font-black font-serif text-gray-900 leading-none">+2.5k</p>
+              <p class="my-1 text-[10px] text-pink-500 font-bold uppercase tracking-wider">Clientes</p>
+              <p class="text-[9px] text-gray-400 tracking-wider font-medium uppercase">Atendidos</p>
             </div>
-            <div class="p-2.5 sm:p-3 rounded-2xl bg-white/40 backdrop-blur-sm border border-pink-100/10 text-center">
-              <p class="text-xl sm:text-2xl font-bold font-serif text-gray-900">100%</p>
-              <p class="my-1 text-[10px] sm:text-xs text-emerald-500 font-semibold font-serif italic truncate">Garantizado</p>
-              <p class="text-[9px] sm:text-[10px] text-studio-gray tracking-wider uppercase font-semibold truncate">Satisfacción</p>
+            <div class="p-3.5 rounded-2xl bg-white/70 backdrop-blur-md border border-pink-100/30 shadow-[4px_4px_15px_rgba(212,185,198,0.12)] text-center hover:scale-105 transition-transform duration-300">
+              <p class="text-2xl font-black font-serif text-rose-500 leading-none">100%</p>
+              <p class="my-1 text-[10px] text-emerald-600 font-bold tracking-wider uppercase">Garantizado</p>
+              <p class="text-[9px] text-gray-400 tracking-wider font-medium uppercase">Satisfacción</p>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Column (Sophisticated Image Collage) -->
+        <!-- Right collage (3D floats) -->
         <div class="lg:col-span-5 relative mt-12 lg:mt-0 flex justify-center">
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-pink-200/50 blur-[80px] -z-10"></div>
-          
-          <div data-tilt="true" class="relative w-full max-w-[420px] p-4 bg-white neo-card transition-all duration-500 hover:rotate-1 hover:scale-[1.02]">
-            <div class="rounded-[16px] overflow-hidden aspect-[4/5] relative bg-pink-50">
-              <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200" alt="Nails and Makeup Studio model" class="w-full h-full object-cover">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-pink-400/20 blur-[100px] -z-10 animate-pulse" />
+
+          <!-- Interactive Main Showcase Card -->
+          <div data-tilt="true" class="relative w-full max-w-[420px] p-4 bg-white/95 shadow-[20px_20px_50px_rgba(212,185,198,0.35),-10px_-10px_35px_rgba(255,255,255,0.9)] rounded-[24px]">
+            <div class="rounded-[20px] overflow-hidden aspect-[4/5] relative bg-pink-50">
+              <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&q=80&w=1200" alt="Model" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
               
-              <div class="absolute top-4 left-4 px-3 py-1 bg-white/70 backdrop-blur-md rounded-full border border-white/50 text-[10px] font-bold text-gray-800 tracking-widest uppercase">
-                STUDIO FOCUS
+              <div class="absolute top-4 left-4 px-3.5 py-1.5 bg-white/80 backdrop-blur-md rounded-full border border-white/50 text-[9px] font-extrabold text-gray-900 tracking-widest uppercase shadow-xs">
+                💅 CALM & GLOW
               </div>
 
-              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/80 backdrop-blur-md border border-white/40 shadow-lg">
-                <p class="text-xs font-semibold text-pink-600 tracking-wider uppercase">Tendencia de Primavera</p>
-                <p class="font-serif text-sm font-medium text-gray-950 mt-1">Glow natural con esmaltado pastel premium</p>
+              <!-- Inside glass component -->
+              <div class="absolute bottom-4 left-4 right-4 p-4.5 rounded-2xl bg-white/80 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(212,185,198,0.25)]">
+                <p class="text-[10px] font-extrabold text-pink-600 tracking-widest uppercase">Diseño estrella de hoy</p>
+                <p class="font-serif text-sm font-semibold text-gray-950 mt-1">Esmaltado pastel semipermanente con pan de oro</p>
               </div>
             </div>
 
-            <!-- Floating components -->
-            <div class="absolute -left-2 sm:-left-6 bottom-1/3 p-3 sm:p-3.5 rounded-2xl bg-white/95 shadow-xl border border-pink-100/40 flex items-center gap-2.5 sm:gap-3 max-w-[140px] sm:max-w-[160px] z-10">
-              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 flex-shrink-0">
-                <i data-lucide="sparkles" class="w-4.5 h-4.5 sm:w-5 sm:h-5 animate-pulse"></i>
+            <!-- Floating Microcard Left (Float Keyframe) -->
+            <div class="absolute -left-4 sm:-left-8 bottom-1/3 p-4 rounded-3xl bg-white/95 shadow-[12px_12px_30px_rgba(212,185,198,0.3)] border border-pink-100 flex items-center gap-3 max-w-[150px] sm:max-w-[170px] z-10 float-slow">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-100 to-rose-200 flex items-center justify-center text-pink-600 flex-shrink-0 shadow-inner">
+                <i data-lucide="sparkles" class="w-4.5 h-4.5 animate-spin"></i>
               </div>
               <div>
-                <p class="text-[11px] sm:text-xs font-bold text-gray-900">Uñas Gel</p>
-                <p class="text-[9px] sm:text-[10px] text-studio-gray">Acabado Espejo</p>
+                <p class="text-xs font-extrabold text-gray-950">Uñas Gel</p>
+                <p class="text-[9px] text-pink-500 font-bold uppercase tracking-wider mt-0.5">Top Tendencia</p>
               </div>
             </div>
 
-            <div class="absolute -right-2 sm:-right-6 top-1/4 p-2.5 sm:p-3 rounded-2xl bg-white/95 shadow-xl border border-pink-100/40 flex items-center gap-2.5 sm:gap-3 z-10">
-              <div class="w-7.5 h-7.5 sm:w-8 sm:h-8 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-400">
-                <i data-lucide="heart" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+            <!-- Floating Microcard Right -->
+            <div class="absolute -right-4 sm:-right-8 top-1/4 p-4 rounded-3xl bg-white/95 shadow-[12px_12px_30px_rgba(212,185,198,0.3)] border border-pink-100 flex items-center gap-3 z-10 float-mod">
+              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-rose-100 to-amber-100 flex items-center justify-center text-rose-500 flex-shrink-0">
+                <i data-lucide="heart" class="w-4.5 h-4.5"></i>
               </div>
               <div>
-                <p class="text-[11px] sm:text-xs font-bold text-gray-900">MakeUp Pro</p>
-                <p class="text-[9px] text-emerald-600 font-semibold">• Cupos hoy</p>
+                <p class="text-xs font-extrabold text-gray-950">MakeUp Pro</p>
+                <p class="text-[9px] text-emerald-600 font-extrabold uppercase mt-0.5">• Cupos hoy</p>
               </div>
             </div>
 
@@ -324,246 +292,303 @@
     </div>
   </section>
 
-  <!-- 2. SECCIÓN SERVICIOS -->
-  <section id="services-section" class="py-20 bg-white/40 relative z-10 border-t border-b border-pink-100/20">
+  <!-- 2. SERVICES SECTION (BENTO UI STYLE) -->
+  <section id="services-section" class="py-24 bg-white/40 border-t border-b border-pink-100/20 select-none">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Nuestras Especialidades</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-medium">Servicios Estéticos de Alta Gama</h2>
-        <div class="w-12 h-0.5 bg-pink-300 mx-auto rounded"></div>
-        <p class="text-sm sm:text-base text-studio-gray max-w-xl mx-auto font-light leading-relaxed">
-          Descubre nuestros tratamientos exclusivos. Diseñados meticulosamente para cuidar tu estética y brindarte una experiencia revitalizante.
+        <h2 class="font-display text-4xl text-gray-900 font-black leading-none bg-gradient-to-r from-gray-900 via-rose-700 to-pink-600 bg-clip-text text-transparent">Servicios Estéticos de Alta Gama</h2>
+        <p class="text-sm text-gray-500 max-w-xl mx-auto font-light leading-relaxed">
+          Usa los filtros estéticos para descubrir la propuesta de diseño premium que mejor se adapte a tu look personal.
         </p>
 
-        <!-- Filters -->
-        <div class="flex overflow-x-auto whitespace-nowrap gap-2 pb-2 pt-6 px-4 md:px-0 justify-start md:justify-center -mx-4 md:mx-0 scrollbar-none" style="-webkit-overflow-scrolling: touch;" id="services-filters">
-          <button onclick="filterCategory('todos')" class="filter-btn active-filter px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all uppercase flex-shrink-0 bg-pink-100 text-pink-700 shadow-sm border border-pink-200/50">Todos</button>
-          <button onclick="filterCategory('uñas')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all uppercase flex-shrink-0 bg-white hover:bg-pink-100/20 hover:border-pink-200/40 text-studio-gray border border-pink-100/10">Uñas</button>
-          <button onclick="filterCategory('maquillaje')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all uppercase flex-shrink-0 bg-white hover:bg-pink-100/20 hover:border-pink-200/40 text-studio-gray border border-pink-100/10">Maquillaje</button>
-          <button onclick="filterCategory('cuidado')" class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all uppercase flex-shrink-0 bg-white hover:bg-pink-100/20 hover:border-pink-200/40 text-studio-gray border border-pink-100/10">Cuidado</button>
+        <!-- Filters (Tap feedback) -->
+        <div class="flex overflow-x-auto whitespace-nowrap gap-3 pb-2 pt-6 justify-center" id="services-filters">
+          <button onclick="applyServiceFilter('todos', this)" class="px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-pink-100 text-pink-700 border border-pink-200">✨ Todos</button>
+          <button onclick="applyServiceFilter('uñas', this)" class="px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-white hover:bg-pink-50/50 text-gray-600 border border-pink-100/40">💅 Uñas</button>
+          <button onclick="applyServiceFilter('maquillaje', this)" class="px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-white hover:bg-pink-50/50 text-gray-600 border border-pink-100/40">💄 Maquillaje</button>
+          <button onclick="applyServiceFilter('cuidado', this)" class="px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-white hover:bg-pink-50/50 text-gray-600 border border-pink-100/40">🌱 Cuidado</button>
         </div>
       </div>
 
-      <!-- Services Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="services-grid">
+      <!-- Bento Grid Services -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
         
-        <!-- Card 1 (Uñas) -->
-        <div data-tilt="true" class="service-card neo-card neo-card-hover p-6 flex flex-col justify-between h-full group" data-category="uñas">
+        <!-- Bento Horizontal Card (Promo Wide) -->
+        <div data-tilt="true" class="service-card lg:col-span-2 p-6 sm:p-8 rounded-[24px] bg-white border border-pink-100/50 shadow-[10px_10px_30px_rgba(212,185,198,0.15)] flex flex-col justify-between group h-full" data-category="uñas">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/50 flex items-center justify-center shadow-sm">
-                <i data-lucide="sparkles" class="w-6 h-6 text-pink-400"></i>
+              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/70 shadow-inner flex items-center justify-center">
+                <i data-lucide="sparkles" class="w-6 h-6 text-pink-500"></i>
               </div>
-              <span class="text-[10px] font-bold text-pink-500 uppercase tracking-wider bg-pink-50/50 px-2.5 py-1 rounded-full">Uñas</span>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[8px] font-extrabold text-pink-600 bg-pink-105/60 px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">🔥 El más reservado</span>
+                <span class="text-[9px] font-extrabold text-pink-500 uppercase tracking-widest bg-pink-50/55 px-2.5 py-1 rounded-full border border-pink-100/30">UÑAS</span>
+              </div>
             </div>
-            <div class="space-y-1.5">
-              <h3 class="font-serif text-lg font-medium text-gray-900 group-hover:text-pink-600 transition-colors">Manicura Profesional</h3>
+
+            <div class="space-y-1">
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Manicura Profesional Premium</h3>
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-bold font-serif text-pink-600">$35.000</span>
-                <span class="text-xs text-studio-gray">/ 1h 15m</span>
+                <span class="text-2xl font-black font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500">$35.000</span>
+                <span class="text-xs text-gray-400 font-medium">/ 1h 15m</span>
               </div>
             </div>
-            <p class="text-xs text-studio-gray font-light leading-relaxed">Esmaltado permanente, esculpido y acabados premium adaptados a la forma de tus manos.</p>
-            <ul class="space-y-2 pt-2 border-t border-pink-100/20 text-[11px] text-studio-gray">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Diseño personalizado</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Gel / acrílico de alta duración</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Acabados premium brillantes</li>
-            </ul>
+            
+            <p class="text-xs sm:text-sm text-gray-600 font-light leading-relaxed">Esmaltado permanente orgánico, esculpido y nivelación con base rubber alineados a tus manos.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-3 border-t border-pink-100/30">
+              <div class="flex items-center gap-2 text-xs text-gray-600">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Análisis de cutícula ruso</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-600">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Esmaltado semipermanente</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-600">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Nivelador Rubber con Keratina</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-600">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Hidratación profunda de almendras</span>
+              </div>
+            </div>
           </div>
-          <div class="pt-6 mt-6 border-t border-pink-100/10">
-            <button onclick="bookSpecificService('Manicura Profesional')" class="w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white border border-pink-100 text-pink-600 hover:bg-pink-50/40 hover:border-pink-200 transition-all text-center">Reservar ahora</button>
+
+          <div class="pt-6 mt-6 border-t border-pink-100/20">
+            <button onclick="selectServiceForBooking('Manicura Profesional')" class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-white to-pink-50/20 border border-pink-200 text-pink-700 hover:from-pink-500 hover:to-rose-500 hover:text-white hover:border-transparent transition-all flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Confirmar Cita</span>
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Card 2 (Maquillaje) -->
-        <div data-tilt="true" class="service-card neo-card neo-card-hover p-6 flex flex-col justify-between h-full group" data-category="maquillaje">
+        <!-- Bento Card Standard 1 (Maquillaje) -->
+        <div data-tilt="true" class="service-card p-6 sm:p-8 rounded-[24px] bg-white border border-pink-100/50 shadow-[10px_10px_30px_rgba(212,185,198,0.15)] flex flex-col justify-between group h-full" data-category="maquillaje">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/50 flex items-center justify-center shadow-sm">
-                <i data-lucide="heart" class="w-6 h-6 text-pink-400"></i>
+              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/70 shadow-inner flex items-center justify-center">
+                <i data-lucide="heart" class="w-6 h-6 text-pink-500"></i>
               </div>
-              <span class="text-[10px] font-bold text-pink-500 uppercase tracking-wider bg-pink-50/50 px-2.5 py-1 rounded-full">Maquillaje</span>
+              <span class="text-[9px] font-extrabold text-pink-500 uppercase tracking-widest bg-pink-50/55 px-2.5 py-1 rounded-full border border-pink-100/30">MAKEUP</span>
             </div>
-            <div class="space-y-1.5">
-              <h3 class="font-serif text-lg font-medium text-gray-900 group-hover:text-pink-600 transition-colors">Maquillaje Profesional</h3>
+
+            <div class="space-y-1">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Maquillaje Profesional</h3>
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-bold font-serif text-pink-600">$45.000</span>
-                <span class="text-xs text-studio-gray">/ 1h 30m</span>
+                <span class="text-2xl font-black font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500">$45.000</span>
+                <span class="text-xs text-gray-400 font-medium">/ 1h 30m</span>
               </div>
             </div>
-            <p class="text-xs text-studio-gray font-light leading-relaxed">Técnicas de tendencia con productos premium pensadas para eventos de gala, novias e invitadas.</p>
-            <ul class="space-y-2 pt-2 border-t border-pink-100/20 text-[11px] text-studio-gray">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Piel blindada y glow natural</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Preparación de piel premium</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Pestañas de cortesía incluidas</li>
-            </ul>
+            
+            <p class="text-xs text-gray-600 font-light leading-relaxed">Técnicas de tendencia con blindaje térmico de maquillaje de alta retención para novias e invitadas de honor.</p>
+            
+            <div class="space-y-2 pt-3 border-t border-pink-100/30 text-xs text-gray-600">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Piel blindada HD</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Pestañas premium hechas a mano</span>
+              </div>
+            </div>
           </div>
-          <div class="pt-6 mt-6 border-t border-pink-100/10">
-            <button onclick="bookSpecificService('Maquillaje Profesional')" class="w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white border border-pink-100 text-pink-600 hover:bg-pink-50/40 hover:border-pink-200 transition-all text-center">Reservar ahora</button>
+
+          <div class="pt-6 mt-6 border-t border-pink-100/20">
+            <button onclick="selectServiceForBooking('Maquillaje Profesional')" class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-white to-pink-50/20 border border-pink-200 text-pink-700 hover:from-pink-500 hover:to-rose-500 hover:text-white hover:border-transparent transition-all flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Confirmar Cita</span>
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Card 3 (Cuidado) -->
-        <div data-tilt="true" class="service-card neo-card neo-card-hover p-6 flex flex-col justify-between h-full group" data-category="cuidado">
+        <!-- Bento Card Standard 2 (Cuidado) -->
+        <div data-tilt="true" class="service-card p-6 sm:p-8 rounded-[24px] bg-white border border-pink-100/50 shadow-[10px_10px_30px_rgba(212,185,198,0.15)] flex flex-col justify-between group h-full" data-category="cuidado">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/50 flex items-center justify-center shadow-sm">
-                <i data-lucide="shield" class="w-6 h-6 text-pink-400"></i>
+              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/70 shadow-inner flex items-center justify-center">
+                <i data-lucide="shield" class="w-6 h-6 text-pink-500"></i>
               </div>
-              <span class="text-[10px] font-bold text-pink-500 uppercase tracking-wider bg-pink-50/50 px-2.5 py-1 rounded-full">Cuidado</span>
+              <span class="text-[9px] font-extrabold text-pink-500 uppercase tracking-widest bg-pink-50/55 px-2.5 py-1 rounded-full border border-pink-100/30">CUIDADO</span>
             </div>
-            <div class="space-y-1.5">
-              <h3 class="font-serif text-lg font-medium text-gray-900 group-hover:text-pink-600 transition-colors">Cuidado de Uñas</h3>
+
+            <div class="space-y-1">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Cuidado de Uñas Profundo</h3>
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-bold font-serif text-pink-600">$20.000</span>
-                <span class="text-xs text-studio-gray">/ 45min</span>
+                <span class="text-2xl font-black font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500">$20.000</span>
+                <span class="text-xs text-gray-400 font-medium">/ 45min</span>
               </div>
             </div>
-            <p class="text-xs text-studio-gray font-light leading-relaxed">Tratamiento profundo para devolver la resistencia y vitalidad natural a las uñas maltratadas.</p>
-            <ul class="space-y-2 pt-2 border-t border-pink-100/20 text-[11px] text-studio-gray">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Fortalecimiento hidratante</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Limpieza profunda pulcra</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Reparación y nivelación</li>
-            </ul>
+            
+            <p class="text-xs text-gray-600 font-light leading-relaxed">Tratamiento de nutrición y fortalecimiento restaurativo de queratina para uñas quebradizas.</p>
+            
+            <div class="space-y-2 pt-3 border-t border-pink-100/30 text-xs text-gray-600">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Baño Nutritivo Fortalecedor</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Reparación de fisuras</span>
+              </div>
+            </div>
           </div>
-          <div class="pt-6 mt-6 border-t border-pink-100/10">
-            <button onclick="bookSpecificService('Cuidado de Uñas')" class="w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white border border-pink-100 text-pink-600 hover:bg-pink-50/40 hover:border-pink-200 transition-all text-center">Reservar ahora</button>
+
+          <div class="pt-6 mt-6 border-t border-pink-100/20">
+            <button onclick="selectServiceForBooking('Cuidado de Uñas')" class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-white to-pink-50/20 border border-pink-200 text-pink-700 hover:from-pink-500 hover:to-rose-500 hover:text-white hover:border-transparent transition-all flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Confirmar Cita</span>
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Card 4 (Nail Art) -->
-        <div data-tilt="true" class="service-card neo-card neo-card-hover p-6 flex flex-col justify-between h-full group" data-category="uñas">
+        <!-- Bento Card Standard 3 (Nail Art) -->
+        <div data-tilt="true" class="service-card p-6 sm:p-8 rounded-[24px] bg-white border border-pink-100/50 shadow-[10px_10px_30px_rgba(212,185,198,0.15)] flex flex-col justify-between group h-full" data-category="uñas">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/50 flex items-center justify-center shadow-sm">
-                <i data-lucide="paintbrush" class="w-6 h-6 text-pink-400"></i>
+              <div class="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100/70 shadow-inner flex items-center justify-center">
+                <i data-lucide="paintbrush" class="w-6 h-6 text-pink-500"></i>
               </div>
-              <span class="text-[10px] font-bold text-pink-500 uppercase tracking-wider bg-pink-50/50 px-2.5 py-1 rounded-full">Uñas</span>
+              <span class="text-[9px] font-extrabold text-pink-500 uppercase tracking-widest bg-pink-50/55 px-2.5 py-1 rounded-full border border-pink-100/30">DISEÑO</span>
             </div>
-            <div class="space-y-1.5">
-              <h3 class="font-serif text-lg font-medium text-gray-900 group-hover:text-pink-600 transition-colors">Diseño Artístico</h3>
+
+            <div class="space-y-1">
+              <h3 class="font-serif text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Diseño Artístico de Autor</h3>
               <div class="flex items-baseline gap-2">
-                <span class="text-xl font-bold font-serif text-pink-600">$15.000</span>
-                <span class="text-xs text-studio-gray">/ +30min</span>
+                <span class="text-2xl font-black font-serif text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-500">$15.000</span>
+                <span class="text-xs text-gray-400 font-medium">/ +30min</span>
               </div>
             </div>
-            <p class="text-xs text-studio-gray font-light leading-relaxed">Efectos modernos pintados a mano alzada, pedrería fina, stickers chic y técnicas francesas modernas.</p>
-            <ul class="space-y-2 pt-2 border-t border-pink-100/20 text-[11px] text-studio-gray">
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Mano alzada y trazos finos</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Decoración encapsulada</li>
-              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-pink-400"></i>Estilos abstractos y chic</li>
-            </ul>
+            
+            <p class="text-xs text-gray-600 font-light leading-relaxed">Trazos a mano alzada, encapsulado de glitter, pedrería swarovski o diseño abstracto en tendencia.</p>
+            
+            <div class="space-y-2 pt-3 border-t border-pink-100/30 text-xs text-gray-600">
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Pincel de microprecisión</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-4 h-4 rounded-full bg-pink-50 flex items-center justify-center text-pink-500 border border-pink-100/50"><i data-lucide="check" class="w-2.5 h-2.5"></i></span>
+                <span>Incrustaciones encapsuladas</span>
+              </div>
+            </div>
           </div>
-          <div class="pt-6 mt-6 border-t border-pink-100/10">
-            <button onclick="bookSpecificService('Diseño Artístico')" class="w-full py-2.5 rounded-xl text-xs font-semibold uppercase tracking-wider bg-white border border-pink-100 text-pink-600 hover:bg-pink-50/40 hover:border-pink-200 transition-all text-center">Reservar ahora</button>
+
+          <div class="pt-6 mt-6 border-t border-pink-100/20">
+            <button onclick="selectServiceForBooking('Diseño Artístico')" class="w-full py-3 rounded-full text-xs font-bold uppercase tracking-widest bg-gradient-to-r from-white to-pink-50/20 border border-pink-200 text-pink-700 hover:from-pink-500 hover:to-rose-500 hover:text-white hover:border-transparent transition-all flex items-center justify-center gap-1.5 shadow-xs">
+              <span>Confirmar Cita</span>
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROMOTIONAL BENTO SPECIAL BLOCK (Matching React Bento) -->
+        <div id="promo-bento-card" class="p-6 sm:p-8 rounded-[24px] bg-gradient-to-br from-pink-400 via-pink-500 to-rose-400 text-white flex flex-col justify-between h-full shadow-[0_20px_40px_rgba(244,143,177,0.35)] relative overflow-hidden group border border-pink-200/30">
+          <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
+          
+          <div class="space-y-4 relative z-10">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-[9px] font-extrabold uppercase tracking-widest shadow-xs">
+              🎁 Beneficio Exclusivo
+            </div>
+            <div class="space-y-1">
+              <h3 class="font-serif text-2xl font-bold leading-tight">-10% de Descuento</h3>
+              <p class="text-[10px] uppercase font-bold tracking-widest text-pink-100">Horario Feliz de Lunes a Miércoles</p>
+            </div>
+            <p class="text-xs text-pink-50 font-light leading-relaxed">
+              Arregla tus uñas o programa tu maquillaje al inicio de semana y obtén un 10% de descuento automático en cualquier tratamiento premium.
+            </p>
+            
+            <div class="p-3.5 rounded-xl bg-white/10 border border-white/20 inline-block">
+              <p class="text-xs font-bold font-mono">Código: RELAX10</p>
+            </div>
+          </div>
+
+          <div class="pt-6 relative z-10 border-t border-white/10 mt-6 animate-pulse">
+            <button onclick="claimPromoDiscount()" class="w-full py-3 bg-white text-pink-600 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-pink-50 hover:scale-105 active:scale-95 transition-all shadow-md cursor-pointer flex items-center justify-center gap-1.5">
+              <span>Reclamar Descuento</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- 3. SECCIÓN PORTAFOLIO -->
-  <section id="portfolio-section" class="py-20 relative z-10">
+  <!-- 3. PORTFOLIO BENTO SECTION -->
+  <section id="portfolio-section" class="py-24 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Heading -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Galería de Estilos</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-medium font-serif">Resultados que hablan por sí solos</h2>
-        <div class="w-12 h-0.5 bg-pink-300 mx-auto rounded"></div>
-        <p class="text-sm sm:text-base text-studio-gray max-w-xl mx-auto font-light leading-relaxed">
+        <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-bold">Resultados que hablan por sí solos</h2>
+        <p class="text-sm text-gray-500 max-w-xl mx-auto font-light leading-relaxed">
           Cada diseño se adapta con muchísima precisión al estilo y la personalidad de nuestras distinguidas clientas.
         </p>
       </div>
 
-      <!-- Portfolio Grid -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      <!-- Portfolio Bento Layout Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8">
         
-        <!-- Portfolio 1 -->
-        <div onclick="openLightbox('port-1')" data-tilt="true" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-white neo-card p-2 sm:p-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-pink-100/50">
-          <div class="relative aspect-[4/5] rounded-[14px] overflow-hidden bg-pink-50">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Uñas Acrílicas de Lujo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md border border-white/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 text-pink-500">
-              <i data-lucide="eye" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            </div>
-            <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4">
-              <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] sm:text-[10px] font-bold text-gray-800 tracking-wider uppercase border border-white/50">Uñas Acrílicas</span>
-            </div>
+        <!-- Bento item 1 (Wide lg:col-span-7) -->
+        <div onclick="openItemLightbox('port-1')" class="lg:col-span-7 group relative cursor-pointer p-4 bg-white/95 neo-card hover:border-pink-300">
+          <div class="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-pink-50">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Uñas acrílicas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all text-pink-500 shadow"><i data-lucide="eye" class="w-4 h-4"></i></div>
+            <div class="absolute bottom-3 left-3"><span class="px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full text-[9px] font-bold text-gray-900 border border-white/50">Uñas Acrílicas</span></div>
           </div>
-          <div class="p-2 sm:p-3 space-y-1">
-            <h3 class="font-serif text-xs sm:text-sm font-semibold text-gray-950 truncate">Uñas Acrílicas Elegantes</h3>
-            <div class="flex flex-col xs:flex-row xs:items-center xs:justify-between text-[9px] sm:text-[11px] text-studio-gray gap-1">
-              <span class="truncate">Técnica: Acrílico + Oro</span>
-              <span class="text-pink-500 font-semibold flex-shrink-0">Ver más</span>
-            </div>
+          <div class="p-2 sm:p-3 space-y-2">
+            <div class="flex items-center justify-between"><h3 class="font-serif text-sm sm:text-base font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Uñas Acrílicas de Lujo</h3><span class="text-[9px] text-pink-500 font-medium bg-pink-50 px-2 py-0.5 rounded-sm">Premium</span></div>
+            <div class="flex justify-between text-xs text-gray-500 pt-1.5 border-t border-pink-100/20"><span class="font-light">Técnica: <strong class="text-gray-700">Acrílico + Encapsulado de oro</strong></span><span class="text-pink-600 font-semibold flex items-center gap-0.5">Ver Detalle <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span></div>
           </div>
         </div>
 
-        <!-- Portfolio 2 -->
-        <div onclick="openLightbox('port-2')" data-tilt="true" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-white neo-card p-2 sm:p-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-pink-100/50">
-          <div class="relative aspect-[4/5] rounded-[14px] overflow-hidden bg-pink-50">
-            <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=800" alt="Nail Art Minimalista" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md border border-white/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 text-pink-500">
-              <i data-lucide="eye" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            </div>
-            <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4">
-              <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] sm:text-[10px] font-bold text-gray-800 tracking-wider uppercase border border-white/50">Nail Art</span>
-            </div>
+        <!-- Bento item 2 (Tall lg:col-span-5) -->
+        <div onclick="openItemLightbox('port-2')" class="lg:col-span-5 group relative cursor-pointer p-4 bg-white/95 neo-card hover:border-pink-300">
+          <div class="relative aspect-[4/5] rounded-[18px] overflow-hidden bg-pink-50">
+            <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=800" alt="Nail Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all text-pink-500 shadow"><i data-lucide="eye" class="w-4 h-4"></i></div>
+            <div class="absolute bottom-3 left-3"><span class="px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full text-[9px] font-bold text-gray-900 border border-white/50">Nail Art</span></div>
           </div>
-          <div class="p-2 sm:p-3 space-y-1">
-            <h3 class="font-serif text-xs sm:text-sm font-semibold text-gray-950 truncate">Design Minimalista</h3>
-            <div class="flex flex-col xs:flex-row xs:items-center xs:justify-between text-[9px] sm:text-[11px] text-studio-gray gap-1">
-              <span class="truncate">Técnica: Mano Alzada</span>
-              <span class="text-pink-500 font-semibold flex-shrink-0">Ver más</span>
-            </div>
+          <div class="p-2 sm:p-3 space-y-2">
+            <div class="flex items-center justify-between"><h3 class="font-serif text-sm sm:text-base font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Diseño Minimalista Astrológico</h3><span class="text-[9px] text-pink-500 font-medium bg-pink-50 px-2 py-0.5 rounded-sm">Premium</span></div>
+            <div class="flex justify-between text-xs text-gray-500 pt-1.5 border-t border-pink-100/20"><span class="font-light">Técnica: <strong class="text-gray-700">Mano alzada de precisión</strong></span><span class="text-pink-600 font-semibold flex items-center gap-0.5">Ver Detalle <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span></div>
           </div>
         </div>
 
-        <!-- Portfolio 3 -->
-        <div onclick="openLightbox('port-3')" data-tilt="true" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-white neo-card p-2 sm:p-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-pink-100/50">
-          <div class="relative aspect-[4/5] rounded-[14px] overflow-hidden bg-pink-50">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Maquillaje Glow Natural" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md border border-white/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 text-pink-500">
-              <i data-lucide="eye" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            </div>
-            <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4">
-              <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] sm:text-[10px] font-bold text-gray-800 tracking-wider uppercase border border-white/50">Maquillaje</span>
-            </div>
+        <!-- Bento item 3 (Tall lg:col-span-5) -->
+        <div onclick="openItemLightbox('port-3')" class="lg:col-span-5 group relative cursor-pointer p-4 bg-white/95 neo-card hover:border-pink-300">
+          <div class="relative aspect-[4/5] rounded-[18px] overflow-hidden bg-pink-50">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Glow Natural" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all text-pink-500 shadow"><i data-lucide="eye" class="w-4 h-4"></i></div>
+            <div class="absolute bottom-3 left-3"><span class="px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full text-[9px] font-bold text-gray-900 border border-white/50">Maquillaje</span></div>
           </div>
-          <div class="p-2 sm:p-3 space-y-1">
-            <h3 class="font-serif text-xs sm:text-sm font-semibold text-gray-950 truncate">Glow "Clean Girl"</h3>
-            <div class="flex flex-col xs:flex-row xs:items-center xs:justify-between text-[9px] sm:text-[11px] text-studio-gray gap-1">
-              <span class="truncate">Técnica: Piel Dewy</span>
-              <span class="text-pink-500 font-semibold flex-shrink-0">Ver más</span>
-            </div>
+          <div class="p-2 sm:p-3 space-y-2">
+            <div class="flex items-center justify-between"><h3 class="font-serif text-sm sm:text-base font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Glow Natural "Clean Girl"</h3><span class="text-[9px] text-pink-500 font-medium bg-pink-50 px-2 py-0.5 rounded-sm">Premium</span></div>
+            <div class="flex justify-between text-xs text-gray-500 pt-1.5 border-t border-pink-100/20"><span class="font-light">Técnica: <strong class="text-gray-700">Piel blindada ultra-dewy</strong></span><span class="text-pink-600 font-semibold flex items-center gap-0.5">Ver Detalle <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span></div>
           </div>
         </div>
 
-        <!-- Portfolio 4 -->
-        <div onclick="openLightbox('port-4')" data-tilt="true" class="group relative rounded-2xl overflow-hidden cursor-pointer bg-white neo-card p-2 sm:p-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-pink-100/50">
-          <div class="relative aspect-[4/5] rounded-[14px] overflow-hidden bg-pink-50">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800" alt="Maquillaje de Gala Eventos" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 backdrop-blur-md border border-white/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 text-pink-500">
-              <i data-lucide="eye" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
-            </div>
-            <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4">
-              <span class="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/90 backdrop-blur-md rounded-full text-[8px] sm:text-[10px] font-bold text-gray-800 tracking-wider uppercase border border-white/50 flex items-center leading-none">Novias</span>
-            </div>
+        <!-- Bento item 4 (Wide lg:col-span-7) -->
+        <div onclick="openItemLightbox('port-4')" class="lg:col-span-7 group relative cursor-pointer p-4 bg-white/95 neo-card hover:border-pink-300">
+          <div class="relative aspect-[16/10] rounded-[18px] overflow-hidden bg-pink-50">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800" alt="Look gala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all text-pink-500 shadow"><i data-lucide="eye" class="w-4 h-4"></i></div>
+            <div class="absolute bottom-3 left-3"><span class="px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full text-[9px] font-bold text-gray-900 border border-white/50">Invitadas de Gala</span></div>
           </div>
-          <div class="p-2 sm:p-3 space-y-1">
-            <h3 class="font-serif text-xs sm:text-sm font-semibold text-gray-950 truncate">Look de Gala</h3>
-            <div class="flex flex-col xs:flex-row xs:items-center xs:justify-between text-[9px] sm:text-[11px] text-studio-gray gap-1">
-              <span class="truncate">Técnica: Soft Rose HD</span>
-              <span class="text-pink-500 font-semibold flex-shrink-0">Ver más</span>
-            </div>
+          <div class="p-2 sm:p-3 space-y-2">
+            <div class="flex items-center justify-between"><h3 class="font-serif text-sm sm:text-base font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Look Radiante de Gala</h3><span class="text-[9px] text-pink-500 font-medium bg-pink-50 px-2 py-0.5 rounded-sm">Premium</span></div>
+            <div class="flex justify-between text-xs text-gray-500 pt-1.5 border-t border-pink-100/20"><span class="font-light">Técnica: <strong class="text-gray-700">Soft Rose HD con pan de plata</strong></span><span class="text-pink-600 font-semibold flex items-center gap-0.5">Ver Detalle <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></span></div>
           </div>
         </div>
 
@@ -572,114 +597,80 @@
     </div>
   </section>
 
-  <!-- PORTFOLIO LIGHTBOX MODAL (MANUAL DIALOG LOGIC) -->
-  <div id="lightbox-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeLightbox()">
-    <div class="bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto md:overflow-hidden grid grid-cols-1 md:grid-cols-12 shadow-2xl relative" onclick="event.stopPropagation()">
-      
-      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/40 text-white hover:bg-black/60 flex items-center justify-center">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
+  <!-- LIGHTBOX MANUALLY HANDLED MODE -->
+  <div id="item-dialog-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4" onclick="closeItemLightbox()">
+    <div class="bg-white rounded-[28px] overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto md:overflow-hidden grid grid-cols-1 md:grid-cols-12 shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeItemLightbox()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/40 text-white hover:bg-black/60 flex items-center justify-center transition-transform hover:scale-105"><i data-lucide="x" class="w-5 h-5"></i></button>
 
-      <!-- Left block: Image -->
-      <div class="md:col-span-7 bg-pink-100 aspect-square md:aspect-auto md:h-[550px]">
-        <img id="lightbox-img" src="" alt="Selected portfolio look" class="w-full h-full object-cover">
+      <!-- Left Image -->
+      <div class="md:col-span-7 bg-pink-50 aspect-square md:aspect-auto md:h-[550px]">
+        <img id="modal-image" src="" alt="Portfolio Showcase" class="w-full h-full object-cover">
       </div>
 
-      <!-- Right block: Content -->
-      <div class="md:col-span-5 p-5 sm:p-8 flex flex-col justify-between h-auto md:h-full bg-white">
+      <!-- Right details block -->
+      <div class="md:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white h-full">
         <div class="space-y-6">
-          <div class="space-y-2">
-            <span id="lightbox-badge" class="text-[10px] font-bold text-pink-500 uppercase tracking-widest bg-pink-50 px-2.5 py-1 rounded-full border border-pink-100/50">CATEGORÍA</span>
-            <h3 id="lightbox-title" class="font-serif text-xl sm:text-2xl text-gray-900 font-semibold pt-1">Título de Trabajo</h3>
+          <div class="space-y-2.5">
+            <span id="modal-category" class="text-[10px] uppercase font-extrabold tracking-widest bg-pink-50 text-pink-600 border border-pink-100 px-3 py-1 rounded-full text-center">CATEGORÍA</span>
+            <h3 id="modal-title" class="font-serif text-2xl font-bold text-gray-900 pt-2">Título de trabajo</h3>
           </div>
           <div class="space-y-2">
-            <h4 class="text-xs font-semibold text-gray-800 uppercase tracking-wider">Acerca del Trabajo:</h4>
-            <p id="lightbox-desc" class="text-xs text-studio-gray font-light leading-relaxed">Detalles profundos del trabajo realizado.</p>
+            <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest">Procedimiento:</h4>
+            <p id="modal-description" class="text-xs text-gray-650 leading-relaxed font-light font-sans">Detalles de autor del procedimiento de belleza estética.</p>
           </div>
-          <div class="space-y-2 pt-4 border-t border-pink-100/20">
-            <h4 class="text-xs font-semibold text-gray-800 uppercase tracking-wider">Ficha Técnica:</h4>
-            <div class="grid grid-cols-2 gap-4 text-xs font-light text-studio-gray">
+          <div class="space-y-3 pt-4 border-t border-pink-100/30">
+            <h4 class="text-xs font-bold text-gray-800 uppercase tracking-widest font-sans">Ficha Técnica:</h4>
+            <div class="grid grid-cols-2 gap-3.5 text-xs text-gray-650">
               <div class="p-3 bg-pink-50/20 rounded-xl border border-pink-100/10">
-                <span class="block text-[9px] uppercase font-bold text-pink-600">Procedimiento</span>
-                <span id="lightbox-tech" class="font-medium text-gray-900">Técnica</span>
+                <span class="block text-[8px] uppercase font-extrabold text-pink-600 font-sans tracking-wide">Tratamiento</span>
+                <span id="modal-tech" class="font-bold text-gray-900">Nail Art</span>
               </div>
               <div class="p-3 bg-pink-50/20 rounded-xl border border-pink-100/10">
-                <span class="block text-[9px] uppercase font-bold text-pink-600">Duración Aprox</span>
-                <span id="lightbox-dur" class="font-medium text-gray-900">Duración</span>
+                <span class="block text-[8px] uppercase font-extrabold text-pink-600 font-sans tracking-wide">Duración</span>
+                <span id="modal-duration" class="font-bold text-gray-900">45m</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 mt-8 border-t border-pink-100/30">
-          <button id="lightbox-action-btn" class="w-full py-3 sm:py-3.5 rounded-full text-xs font-bold uppercase tracking-wider neo-btn-primary text-pink-700 flex items-center justify-center gap-1.5 shadow">
+        <div class="pt-6 mt-6 border-t border-pink-100/30">
+          <button id="modal-action-btn" class="w-full py-4 rounded-full text-xs font-extrabold uppercase tracking-widest neo-btn-primary text-pink-700 flex items-center justify-center gap-1.5 shadow-sm">
             <i data-lucide="calendar" class="w-4 h-4"></i>
-            Reservar este estilo
+            <span>Reservar este estilo</span>
           </button>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- 4. SECCIÓN SOBRE EL ESTUDIO -->
-  <section id="about-section" class="py-20 bg-white/40 border-t border-b border-pink-100/20 relative z-10">
+  <!-- 4. ABOUT THE COMPACT STUDIO -->
+  <section id="about-section" class="py-24 bg-white/40 border-t border-b border-pink-100/20 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Text Philosophy -->
         <div class="lg:col-span-6 space-y-6">
           <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Nuestra Filosofía</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-medium font-serif">
-            Un espacio creado para <br />
-            <span class="italic text-pink-500">realzar tu belleza</span>
-          </h2>
-          
-          <!-- Divider Line (Pink) -->
-          <div class="w-20 h-1 bg-pink-300 rounded"></div>
-
-          <p class="text-sm sm:text-base text-studio-gray font-light leading-relaxed">
-            Somos un estudio especializado en uñas y maquillaje con enfoque en la estética moderna, limpieza visual absoluta y atención personalizada de alto confort estético. Nuestro objetivo es que cada clienta salga sintiéndose segura, audaz, elegante y renovada.
+          <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-bold leading-tight">un espacio preparado para <br><span class="italic text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 font-medium">realzar tu esplendor</span></h2>
+          <div class="w-16 h-1 bg-pink-300 rounded"></div>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-light">
+            Somos un estudio especializado en uñas y maquillaje con enfoque en la estética limpia, bioseguridad absoluta y atención personalizada premium. Nuestro propósito es que cada clienta experimente un trato de estrella y el confort estético que se merece.
           </p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 font-light text-studio-gray">
-            <div class="space-y-1 bg-white/50 p-4 rounded-2xl border border-pink-100/20 shadow-sm">
-              <h4 class="text-sm font-semibold text-gray-950 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
-                Higiene Rigurosa
-              </h4>
-              <p class="text-xs">Estrictos protocolos de autoclave y bioseguridad permanente.</p>
-            </div>
-            <div class="space-y-1 bg-white/50 p-4 rounded-2xl border border-pink-100/20 shadow-sm">
-              <h4 class="text-sm font-semibold text-gray-950 flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
-                Productos Importados
-              </h4>
-              <p class="text-xs">Fórmulas hipoalergénicas y orgánicas cruelty-free.</p>
-            </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-xs">
+            <div class="p-4 rounded-2xl bg-white border border-pink-100/30 shadow-xs"><h4 class="font-bold text-gray-900 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>Higiene Rigurosa</h4><p class="text-gray-500 font-light mt-1">Estrictos protocolos de esterilizado autoclave.</p></div>
+            <div class="p-4 rounded-2xl bg-white border border-pink-100/30 shadow-xs"><h4 class="font-bold text-gray-900 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>Fórmulas Orgánicas</h4><p class="text-gray-500 font-light mt-1">Hipoalergénicos e importados certificados.</p></div>
           </div>
         </div>
 
-        <!-- Right Visual Collage -->
         <div class="lg:col-span-6 relative flex justify-center">
-          <div class="grid grid-cols-2 gap-4 w-full max-w-[450px]">
+          <div class="grid grid-cols-2 gap-4 w-full max-w-[420px]">
             <div class="space-y-4">
-              <div class="rounded-2xl overflow-hidden aspect-[3/4] bg-pink-100 shadow-lg border border-pink-100/30">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Beautiful makeup application" class="w-full h-full object-cover">
-              </div>
-              <div class="p-4 rounded-2xl bg-white neo-card text-center">
-                <p class="text-xs font-bold text-gray-900">Especialistas</p>
-                <p class="text-[10px] text-pink-500 font-medium tracking-wide uppercase mt-0.5">⭐ Certificadas</p>
-              </div>
+              <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-md border border-pink-100/30"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full h-full object-cover"></div>
+              <div class="p-4 rounded-2xl bg-white text-center shadow-xs border border-pink-100/20"><p class="text-xs font-bold text-gray-900">Especialistas</p><p class="text-[9px] text-pink-500 font-bold uppercase tracking-widest mt-0.5">⭐ Certificadas</p></div>
             </div>
             <div class="space-y-4 pt-8">
-              <div class="p-4 rounded-2xl bg-white neo-card text-center">
-                <p class="text-xs font-bold text-gray-900">Salón Orgánico</p>
-                <p class="text-[10px] text-emerald-500 font-medium tracking-wide uppercase mt-0.5">🌱 Bioseguridad</p>
-              </div>
-              <div class="rounded-2xl overflow-hidden aspect-[3/4] bg-pink-100 shadow-lg border border-pink-100/30">
-                <img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=800" alt="Modern nails setup" class="w-full h-full object-cover">
-              </div>
+              <div class="p-4 rounded-2xl bg-white text-center shadow-xs border border-pink-100/20"><p class="text-xs font-bold text-gray-900">Salón Orgánico</p><p class="text-[9px] text-emerald-600 font-bold uppercase tracking-widest mt-0.5">🌱 Bioseguridad</p></div>
+              <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-md border border-pink-100/30"><img src="https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=800" alt="Nails" class="w-full h-full object-cover"></div>
             </div>
           </div>
         </div>
@@ -688,52 +679,42 @@
     </div>
   </section>
 
-  <!-- 5. SECCIÓN DE RESERVAS FORMULARIO (WhatsApp Automation) -->
-  <section id="booking-section" class="py-20 relative z-10">
+  <!-- 5. BOOKING FORM & LIVE TICKET -->
+  <section id="booking-section" class="py-24 relative z-10 select-none">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <!-- Left Side info -->
-        <div class="lg:col-span-5 space-y-6 pt-2">
+        <!-- Left Side -->
+        <div class="lg:col-span-5 space-y-6">
           <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Reserva tu Momento</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-medium font-serif">Agendar Cita Online</h2>
-          <p class="text-sm font-light text-studio-gray leading-relaxed">
-            Elige el servicio de tu agrado, selecciona el día y hora indicados y presiona confirmar. Serás registrada instantáneamente en nuestra base local y se te dará un enlace directo para enviarnos los datos por WhatsApp.
+          <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-bold leading-tight">Agendar Cita en Línea</h2>
+          <p class="text-sm text-gray-600 leading-relaxed font-light">
+            Elige tu especialidad, selecciona el día y horario indicados y presiona confirmar. Serás registrada instantáneamente en nuestra base local y se te dará un enlace directo para enviarnos los datos por WhatsApp.
           </p>
 
-          <div class="space-y-4">
-            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/25">
-              <div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 text-xs font-bold flex items-center justify-center flex-shrink-0">1</div>
-              <span class="text-xs text-studio-gray">Completa los campos con tu información.</span>
-            </div>
-            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/25">
-              <div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 text-xs font-bold flex items-center justify-center flex-shrink-0">2</div>
-              <span class="text-xs text-studio-gray">Confirma la cita en la web.</span>
-            </div>
-            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/25">
-              <div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 text-xs font-bold flex items-center justify-center flex-shrink-0">3</div>
-              <span class="text-xs text-studio-gray">Envía la confirmación por WhatsApp en un toque.</span>
-            </div>
+          <div class="space-y-4 text-xs font-medium text-gray-600">
+            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/20"><div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 font-bold flex items-center justify-center flex-shrink-0">1</div><span>Completa los campos con tu información básica.</span></div>
+            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/20"><div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 font-bold flex items-center justify-center flex-shrink-0">2</div><span>Confirma la cita y mira tu Ticket 3D en vivo.</span></div>
+            <div class="flex gap-4 items-center p-3 rounded-2xl bg-white/40 border border-pink-100/20"><div class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 font-bold flex items-center justify-center flex-shrink-0">3</div><span>Envía el contenido autocompletado por WhatsApp.</span></div>
           </div>
         </div>
 
-        <!-- Right Side: Neomorphic Form -->
-        <div class="lg:col-span-7">
+        <!-- Right Side: Neomorphic form + Interactive Ticket -->
+        <div class="lg:col-span-7 space-y-8">
           <div class="neo-card p-6 sm:p-8 relative">
-            <h3 class="font-serif text-xl font-semibold text-gray-900 mb-6">Ficha de Reserva Neomórfica</h3>
+            <h3 class="font-serif text-xl font-bold text-gray-900 mb-6">Ficha de Reserva Neomórfica</h3>
 
-            <form id="appointment-form" onsubmit="confirmAppointment(event)" class="space-y-6">
+            <form id="booking-local-form" onsubmit="executeAppointmentWeb(event)" class="space-y-6">
               
               <div class="space-y-1.5">
-                <label class="text-xs font-semibold text-gray-700 block"><i data-lucide="user" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5"></i>Nombre Completo</label>
-                <input type="text" id="form-name" required placeholder="Ej. Camila Rosales" class="w-full px-4 py-3 rounded-xl text-sm neo-input">
+                <label class="text-xs font-bold text-gray-700 block"><i data-lucide="user" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5" />Nombre Completo</label>
+                <input type="text" id="form-name" required placeholder="Ej. Camila Rosales" class="w-full px-4 py-3.5 rounded-xl text-sm neo-input">
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="space-y-1.5">
-                  <label class="text-xs font-semibold text-gray-700 block"><i data-lucide="sparkles" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5"></i>Servicio</label>
-                  <select id="form-service" required class="w-full px-4 py-3 rounded-xl text-sm neo-input text-gray-700">
+                  <label class="text-xs font-bold text-gray-700 block"><i data-lucide="sparkles" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5" />Servicio</label>
+                  <select id="form-service" required class="w-full px-4 py-3.5 rounded-xl text-sm neo-input text-gray-700">
                     <option value="">Selecciona...</option>
                     <option value="Manicura Profesional">Manicura Profesional - $35.000</option>
                     <option value="Maquillaje Profesional">Maquillaje Profesional - $45.000</option>
@@ -743,20 +724,20 @@
                 </div>
 
                 <div class="space-y-1.5">
-                  <label class="text-xs font-semibold text-gray-700 block"><i data-lucide="phone" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5"></i>WhatsApp / Teléfono</label>
-                  <input type="tel" id="form-whatsapp" required placeholder="Ej. +5491136458742" class="w-full px-4 py-3 rounded-xl text-sm neo-input">
+                  <label class="text-xs font-bold text-gray-700 block"><i data-lucide="phone" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5" />WhatsApp / Teléfono</label>
+                  <input type="tel" id="form-whatsapp" required placeholder="Ej. +5491136458742" class="w-full px-4 py-3.5 rounded-xl text-sm neo-input">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="space-y-1.5">
-                  <label class="text-xs font-semibold text-gray-700 block"><i data-lucide="calendar" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5"></i>Fecha de Cita</label>
-                  <input type="date" id="form-date" required class="w-full px-4 py-3 rounded-xl text-sm neo-input">
+                  <label class="text-xs font-bold text-gray-700 block"><i data-lucide="calendar" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5" />Fecha de Cita</label>
+                  <input type="date" id="form-date" required class="w-full px-4 py-3.5 rounded-xl text-sm neo-input">
                 </div>
 
                 <div class="space-y-1.5">
-                  <label class="text-xs font-semibold text-gray-700 block"><i data-lucide="clock" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5"></i>Hora de Cita</label>
-                  <select id="form-time" required class="w-full px-4 py-3 rounded-xl text-sm neo-input text-gray-700">
+                  <label class="text-xs font-bold text-gray-700 block"><i data-lucide="clock" class="inline w-3.5 h-3.5 text-pink-400 mr-1 pb-0.5" />Hora de Cita</label>
+                  <select id="form-time" required class="w-full px-4 py-3.5 rounded-xl text-sm neo-input text-gray-700">
                     <option value="">Selecciona la hora...</option>
                     <option value="09:00 AM">09:00 AM</option>
                     <option value="10:30 AM">10:30 AM</option>
@@ -770,139 +751,173 @@
               </div>
 
               <div>
-                <button type="submit" class="w-full py-4 rounded-full text-sm font-semibold uppercase tracking-wider neo-btn-primary text-pink-700 text-center shadow-lg cursor-pointer">
-                  Confirmar cita
+                <button type="submit" class="w-full py-4 rounded-full text-xs font-extrabold uppercase tracking-widest neo-btn-primary text-pink-700 text-center shadow">
+                  Confirmar cita localmente
                 </button>
               </div>
 
             </form>
 
-            <!-- Success Card Triggered by JS -->
+            <!-- Success Box -->
             <div id="booking-success-box" class="hidden mt-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 space-y-3">
               <div class="flex items-center gap-2">
-                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i>
-                <span class="font-bold text-sm">Reserva Registrada Exitosamente</span>
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 animate-bounce" />
+                <span class="font-bold text-sm">Reserva Guardada Exitosamente</span>
               </div>
-              <p class="text-xs text-emerald-700 leading-relaxed font-light">
-                ¡Excelente! Tu cita quedó confirmada localmente. Para agendarla por completo y que una especialista te reserve el lugar premium en la agenda oficial, presiona el botón de confirmación automática de abajo para enviarnos tu ficha por WhatsApp.
+              <p class="text-xs text-rose-700 leading-relaxed font-medium">
+                ¡Excelente! Tu cita quedó confirmada localmente. Presiona el botón verde de abajo para enviarnos tu ficha por WhatsApp de manera automática:
               </p>
               <div>
-                <a id="whatsapp-sender-btn" href="#" target="_blank" class="w-full sm:w-auto px-5 py-2.5 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md inline-flex items-center justify-center gap-2">
-                  <i data-lucide="message-square" class="w-4 h-4"></i> Enviar a WhatsApp
+                <a id="whatsapp-sender-btn" href="#" target="_blank" class="w-full px-5 py-3 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md inline-flex items-center justify-center gap-1.5 transition-transform hover:scale-105 active:scale-95">
+                  <i data-lucide="message-square" class="w-4 h-4" /> Enviar por WhatsApp
                 </a>
               </div>
             </div>
 
+            <!-- Tactile 3D Ticket Summary -->
+            <div id="live-ticket-container" class="hidden mt-6 pt-2">
+              <div data-tilt="true" class="p-6 rounded-[28px] bg-white border border-pink-200/40 shadow-[12px_12px_32px_rgba(212,185,198,0.2),-10px_-10px_25px_rgba(255,255,255,0.9)] relative overflow-hidden transition-all duration-500">
+                
+                <!-- Side check indents -->
+                <div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-[#FDFBFB] border-r border-pink-100 z-10"></div>
+                <div class="absolute top-1/2 -right-3 w-6 h-6 rounded-full bg-[#FDFBFB] border-l border-pink-100 z-10"></div>
+                
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between border-b border-dashed border-pink-200 pb-3">
+                    <div class="flex items-center gap-1.5 font-mono text-[10px] font-bold text-pink-600 tracking-wider">
+                      <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                      <span>LIVE RESUME TICKET</span>
+                    </div>
+                    <span class="font-mono text-[9px] text-gray-400">#RES-2292</span>
+                  </div>
+
+                  <div class="space-y-3 pt-1">
+                    <div id="ticket-item-name" class="hidden flex justify-between items-baseline text-xs">
+                      <span class="font-mono text-[10px] text-gray-400">CLIENTE:</span>
+                      <span id="ticket-val-name" class="font-bold text-gray-900 text-right truncate max-w-[180px]">-</span>
+                    </div>
+                    <div id="ticket-item-service" class="hidden flex justify-between items-baseline text-xs">
+                      <span class="font-mono text-[10px] text-gray-400">SERVICIO:</span>
+                      <span id="ticket-val-service" class="font-serif font-bold text-pink-600 text-right">-</span>
+                    </div>
+                    <div id="ticket-item-date" class="hidden flex justify-between items-baseline text-xs">
+                      <span class="font-mono text-[10px] text-gray-400">FECHA:</span>
+                      <span id="ticket-val-date" class="font-mono font-medium text-gray-800 text-right">-</span>
+                    </div>
+                    <div id="ticket-item-time" class="hidden flex justify-between items-baseline text-xs">
+                      <span class="font-mono text-[10px] text-gray-400">HORARIO:</span>
+                      <span id="ticket-val-time" class="font-bold text-gray-900 text-right bg-pink-100/50 px-2.5 py-0.5 rounded-sm">-</span>
+                    </div>
+                    <div id="ticket-item-whatsapp" class="hidden flex justify-between items-baseline text-xs">
+                      <span class="font-mono text-[10px] text-gray-400">WHATSAPP:</span>
+                      <span id="ticket-val-whatsapp" class="font-mono font-medium text-gray-700 text-right">-</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-dashed border-pink-200 flex flex-col items-center gap-1.5">
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-pink-400 font-mono">PINK STUDIO EXCLUSIVE</span>
+                    <div class="h-9 flex items-center justify-center gap-[1.5px] opacity-75 mt-1 pointer-events-none">
+                      <div class="w-1.5 h-full bg-pink-950" style="width: 4px;"></div>
+                      <div class="w-[1px] h-full bg-pink-950" style="width: 1px;"></div>
+                      <div class="w-0.5 h-full bg-pink-950" style="width: 2px;"></div>
+                      <div class="w-1 h-full bg-pink-950" style="width: 3px;"></div>
+                      <div class="w-[1px] h-full bg-pink-950" style="width: 1px;"></div>
+                      <div class="w-[1.5px] h-full bg-pink-950" style="width: 2px;"></div>
+                      <div class="w-0.5 h-full bg-pink-950" style="width: 2px;"></div>
+                      <div class="w-1.5 h-full bg-pink-950" style="width: 4px;"></div>
+                      <div class="w-[1px] h-full bg-pink-950" style="width: 1px;"></div>
+                    </div>
+                    <span class="text-[7px] font-mono text-gray-400 tracking-widest uppercase">Elegancia garantizada</span>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- 6. SECCIÓN DE TESTIMONIOS (SLIDER SUAVE) -->
-  <section id="testimonials-section" class="py-20 bg-white/40 border-t border-b border-pink-100/20 relative overflow-hidden z-10">
+  <!-- 6. TESTIMONIALS SLIDER SECTION -->
+  <section id="testimonials-section" class="py-24 bg-white/40 border-t border-b border-pink-100/20 relative overflow-hidden z-10 select-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Nuestras Clientas</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-medium font-serif">Resultados de Confianza</h2>
-        <div class="w-12 h-0.5 bg-pink-300 mx-auto rounded"></div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-gray-900 font-bold">Resultados de Confianza</h2>
       </div>
 
-      <!-- Carousel Container -->
       <div class="relative max-w-2xl mx-auto">
-        <div class="relative overflow-hidden py-4 px-2">
-          
+        <div class="relative overflow-hidden py-4">
           <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slider-track">
             
-            <!-- Slide 1 -->
             <div class="w-full flex-shrink-0 px-4">
-              <div class="neo-card p-6 sm:p-8 text-center space-y-4">
+              <div class="p-8 sm:p-10 rounded-[28px] bg-white border border-pink-100/30 shadow-[10px_10px_30px_rgba(212,185,198,0.12)] space-y-4 text-center">
                 <div class="flex justify-center text-amber-400 gap-0.5">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
-                <p class="font-serif italic text-sm text-studio-gray leading-relaxed font-light">"Me encantaron mis uñas, súper profesionales, el espacio transmite muchísima paz y duraron impecables por más de 3 semanas."</p>
+                <p class="font-serif italic text-base text-gray-600 leading-relaxed font-light">"Me encantaron mis uñas, súper profesionales, el espacio transmite muchísima paz y duraron impecables por más de 3 semanas."</p>
                 <div>
-                  <h4 class="font-semibold text-gray-950 text-xs">Laura M.</h4>
-                  <span class="text-[10px] text-pink-400 font-medium tracking-wide">Clienta de Manicura Profesional</span>
+                  <h4 class="font-bold text-gray-900 text-sm">Laura M.</h4>
+                  <span class="text-[10px] text-pink-500 font-extrabold uppercase tracking-wide">Clienta de Manicura Profesional</span>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 2 -->
             <div class="w-full flex-shrink-0 px-4">
-              <div class="neo-card p-6 sm:p-8 text-center space-y-4">
+              <div class="p-8 sm:p-10 rounded-[28px] bg-white border border-pink-100/30 shadow-[10px_10px_30px_rgba(212,185,198,0.12)] space-y-4 text-center">
                 <div class="flex justify-center text-amber-400 gap-0.5">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
-                <p class="font-serif italic text-sm text-studio-gray leading-relaxed font-light">"El maquillaje fue perfecto para mi evento, totalmente recomendado. Muy sutil, luminoso y me aguantó intacto toda la noche."</p>
+                <p class="font-serif italic text-base text-gray-600 leading-relaxed font-light">"El maquillaje fue perfecto para mi evento de gala, totalmente recomendado. Muy sutil, luminoso y me aguantó intacto toda la noche."</p>
                 <div>
-                  <h4 class="font-semibold text-gray-950 text-xs">Camila R.</h4>
-                  <span class="text-[10px] text-pink-400 font-medium tracking-wide">Clienta de Maquillaje de Gala</span>
+                  <h4 class="font-bold text-gray-900 text-sm">Camila R.</h4>
+                  <span class="text-[10px] text-pink-500 font-extrabold uppercase tracking-wide">Clienta de Maquillaje de Gala</span>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 3 -->
             <div class="w-full flex-shrink-0 px-4">
-              <div class="neo-card p-6 sm:p-8 text-center space-y-4">
+              <div class="p-8 sm:p-10 rounded-[28px] bg-white border border-pink-100/30 shadow-[10px_10px_30px_rgba(212,185,198,0.12)] space-y-4 text-center">
                 <div class="flex justify-center text-amber-400 gap-0.5">
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 </div>
-                <p class="font-serif italic text-sm text-studio-gray leading-relaxed font-light">"La mejor experiencia que he tenido en un estudio de estética. El café de mimosas es delicioso y la atención al detalle es asombrosa."</p>
+                <p class="font-serif italic text-base text-gray-600 leading-relaxed font-light">"La mejor experiencia que he tenido en un estudio de estética. El servicio y el café son exquisitos, y la atención al detalle asombrosa."</p>
                 <div>
-                  <h4 class="font-semibold text-gray-950 text-xs">Valentina S.</h4>
-                  <span class="text-[10px] text-pink-400 font-medium tracking-wide">Customer VIP</span>
+                  <h4 class="font-bold text-gray-900 text-sm">Valentina S.</h4>
+                  <span class="text-[10px] text-pink-500 font-extrabold uppercase tracking-wide">Clienta VIP</span>
                 </div>
               </div>
             </div>
 
           </div>
-
         </div>
 
-        <!-- Controls Buttons inside -->
-        <button onclick="prevSlide()" class="absolute -left-1 sm:-left-12 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500 z-10">
-          <i data-lucide="chevron-left" class="w-5 h-5"></i>
-        </button>
-        <button onclick="nextSlide()" class="absolute -right-1 sm:-right-12 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500 z-10">
-          <i data-lucide="chevron-right" class="w-5 h-5"></i>
-        </button>
+        <button onclick="prevTestimonial()" class="absolute -left-4 sm:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-600 z-10 transition-transform hover:scale-105"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+        <button onclick="nextTestimonial()" class="absolute -right-4 sm:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-600 z-10 transition-transform hover:scale-105"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
       </div>
 
     </div>
   </section>
 
-  <!-- 7. SECCIÓN CTA FINAL (Rosa Degradado Suave) -->
-  <section class="py-20 relative z-10">
+  <!-- 7. CTA BOTTOM -->
+  <section class="py-24 relative z-10 select-none">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden bg-gradient-to-tr from-pink-100 to-indigo-50 border border-pink-200/40 shadow-xl">
-        <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/20 blur-[60px] -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-pink-300/10 blur-[60px] -z-10"></div>
+      <div class="rounded-[32px] p-8 sm:p-16 text-center relative overflow-hidden bg-gradient-to-tr from-pink-100/70 via-indigo-50/50 to-white border border-pink-200/40 shadow-xl">
+        <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/20 blur-[60px] -z-10 animate-pulse"></div>
 
         <div class="max-w-2xl mx-auto space-y-6">
           <span class="text-xs font-bold text-pink-600 tracking-widest uppercase">Elegancia Exclusiva</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-gray-950 font-semibold font-serif">Agenda tu cita hoy</h2>
-          <p class="text-xs sm:text-sm text-studio-gray font-light leading-relaxed">
-            Transforma tu estilo de cuidado personal o prepárate para brillar en tu próximo gran evento con un servicio adaptado a la forma natural de tu rostro y manos. ¡Reserva en línea en segundos!
+          <h2 class="font-display text-3xl sm:text-4xl text-gray-900 font-black">Agenda tu cita hoy</h2>
+          <p class="text-sm text-gray-500 font-light leading-relaxed">
+            Transforma tu cuidado personal o prepárate para brillar en tu próximo gran evento con un servicio adaptado a ti. ¡Reserva en segundos!
           </p>
           <div class="pt-4">
-            <a href="#booking-section" class="px-8 py-4 rounded-full text-sm font-semibold tracking-wider bg-white border border-pink-200/50 text-pink-600 hover:bg-pink-50 transition-all font-semibold shadow hover:shadow-lg inline-block">
+            <a href="#booking-section" class="px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest bg-white border border-pink-200/60 text-pink-600 hover:text-white hover:bg-pink-500 shadow transition-all hover:scale-105 inline-block">
               Reservar ahora
             </a>
           </div>
@@ -911,250 +926,115 @@
     </div>
   </section>
 
-  <!-- 8. FOOTER -->
-  <footer class="bg-white/40 border-t border-pink-100/30 py-12 relative z-10 select-none">
+  <!-- FOOTER -->
+  <footer class="bg-white/40 border-t border-pink-100/30 pt-16 pb-28 md:pb-16 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
       
-      <!-- Brand column -->
       <div class="space-y-4">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center">
-            <i data-lucide="sparkles" class="w-4 h-4 text-pink-400"></i>
-          </div>
-          <span class="font-serif text-lg font-semibold tracking-wide text-gray-900">Nails & Makeup</span>
+          <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-100 to-rose-200 flex items-center justify-center border border-white"><i data-lucide="sparkles" class="w-4 h-4 text-rose-500"></i></div>
+          <span class="font-serif text-lg font-bold text-gray-900">Nails & Makeup</span>
         </div>
-        <p class="text-xs text-studio-gray font-light">Estudio Premium dedicado al perfeccionamiento de tu estética con altos estándares de salubridad y productos eco-orgánicos.</p>
+        <p class="text-xs text-gray-500 font-light leading-relaxed">Estudio Premium dedicado al perfeccionamiento de tu estética con altos estándares de salubridad y productos eco-orgánicos.</p>
       </div>
 
-      <!-- Location Info -->
       <div class="space-y-3">
-        <h4 class="text-xs uppercase font-bold tracking-wider text-gray-800">Ubicación</h4>
-        <p class="text-xs text-studio-gray flex items-center gap-2 font-light">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-pink-400"></i>
+        <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800">Ubicación</h4>
+        <p class="text-xs text-gray-500 flex items-center gap-2 font-medium">
+          <i data-lucide="map-pin" class="w-4 h-4 text-pink-500" />
           Av. de las Rosas 4390, Palermo CABA
         </p>
       </div>
 
-      <!-- Schedule column -->
       <div class="space-y-3">
-        <h4 class="text-xs uppercase font-bold tracking-wider text-gray-800">Horarios</h4>
-        <p class="text-xs text-studio-gray font-light leading-relaxed">
+        <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800">Horarios</h4>
+        <p class="text-xs text-gray-500 font-light leading-relaxed">
           Lunes a Viernes: 09:00 AM – 08:30 PM <br>
           Sábados: 09:00 AM – 06:00 PM <br>
           Domingos: Cerrado
         </p>
       </div>
 
-      <!-- Social Networks -->
       <div class="space-y-3">
-        <h4 class="text-xs uppercase font-bold tracking-wider text-gray-800">Canales Directos</h4>
+        <h4 class="text-xs uppercase font-bold tracking-widest text-gray-800">Contacto Directo</h4>
         <div class="flex gap-3 pt-1">
-          <a href="#" class="w-8 h-8 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500">
-            <i data-lucide="instagram" class="w-4 h-4"></i>
-          </a>
-          <a href="#" class="w-8 h-8 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500">
-            <i data-lucide="message-square" class="w-4 h-4"></i>
-          </a>
+          <a href="#" class="w-9 h-9 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500 hover:border-pink-200"><i data-lucide="instagram" class="w-4 h-4" /></a>
+          <a href="#" class="w-9 h-9 rounded-full neo-btn flex items-center justify-center text-gray-600 hover:text-pink-500 hover:border-pink-200"><i data-lucide="message-circle" class="w-4 h-4" /></a>
         </div>
       </div>
 
     </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-pink-100/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="text-[10px] text-studio-gray font-light">© 2026 Nails & Makeup Studio. Todos los derechos reservados. Diseñado con Neomorfismo Elegante.</p>
-      <div class="flex gap-4 text-[10px] text-studio-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-pink-100/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-gray-400">
+      <p>© 2026 Nails & Makeup Studio. Todos los derechos reservados. Diseñado con Neomorfismo Elegante & Bento UI.</p>
+      <div class="flex gap-4">
         <a href="#" class="hover:underline">Políticas de Privacidad</a>
-        <a href="#" class="hover:underline">Términos de Cancelación</a>
+        <a href="#" class="hover:underline">Término de Cancelación</a>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING PINK PORTFOLIO WHATSAPP BUTTON -->
+  <!-- FLOATING WHATSAPP -->
   <div class="fixed bottom-6 right-6 z-40">
     <a
-      href="https://wa.me/5491136458742?text=¡Hola!%20Estaba%20revisando%20su%20portafolio%20de%20uñas%20y%20maquillaje%20y%20me%20encantaría%20saber%20más%20sobre%20sus%20diseños%20y%20disponibilidad.%20💕"
+      href="https://wa.me/5491136458742?text=¡Hola!%20Estaba%20revisando%20su%20web%20y%20me%20encantaría%20saber%20más%20sobre%20sus%20diseños%20y%20disponibilidad.%20💕"
       target="_blank"
       rel="noopener noreferrer"
-      class="flex items-center gap-2 px-5 py-3.5 bg-gradient-to-r from-pink-400 via-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-full font-semibold text-xs tracking-wider uppercase shadow-xl hover:shadow-pink-200/60 transition-all border border-pink-200/30 cursor-pointer group active:scale-95 animate-gentle-pulse"
-      title="Consultar Portafolio en WhatsApp"
-      id="btn-floating-whatsapp-portfolio"
+      class="flex items-center gap-2 px-4 py-3.5 sm:px-5 sm:py-3.5 bg-gradient-to-r from-pink-400 via-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white rounded-full font-semibold text-xs tracking-wider uppercase shadow-xl hover:shadow-pink-200/60 transition-all border border-pink-200/30 cursor-pointer group active:scale-95"
+      id="btn-whatsapp-floating"
     >
       <span class="relative flex h-2 w-2">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
       </span>
       <i data-lucide="message-square" class="w-4 h-4 text-white group-hover:scale-110 transition-transform"></i>
-      <span>Consultar Portafolio</span>
+      <span class="hidden md:inline">Consultar Portafolio</span>
+      <span class="inline md:hidden font-bold">WhatsApp</span>
     </a>
   </div>
 
-
-  <!-- JAVASCRIPT LOGIC FOR MODALS, SLIDERS & FILTERS -->
+  <!-- SCRIPTS -->
   <script>
-    // Initialize Lucide Icons
+    // Initialize icons
     lucide.createIcons();
 
-    // Portfolio Data mapping
-    const portfolioData = {
+    // Portfolio items details
+    const portfolioItems = {
       'port-1': {
-        title: 'Uñas Acrílicas Elegantes',
+        title: 'Uñas Acrílicas de Lujo',
         category: 'Uñas Acrílicas',
-        description: 'Manicura de lujo con un esmaltado permanente en rosa pastel y delicadas incrustaciones microesculpidas en partículas de pan de oro real, ideal para dar un brillo sutil pero elegante.',
+        description: 'Manicura premium microesculpida con partículas brillantes de pan de oro real encapsulado sobre una base permanente francesa de acabado rosado pastel extremadamente limpio y elegante.',
         image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800',
-        tech: 'Acrílico + Encapsulado de oro',
-        dur: '1h 45min'
+        tech: 'Acrílico Premium + Pan de Oro',
+        duration: '1h 45m'
       },
       'port-2': {
-        title: 'Design Minimalista (Nail Art)',
+        title: 'Diseño Minimalista Astrológico',
         category: 'Nail Art',
-        description: 'Sofisticado trabajo a mano alzada utilizando pinceles de microprecisión, trazando constelaciones astrológicas y líneas geométricas sobre base orgánica semipermanente nude.',
+        description: 'Sofisticado trazado micro-diseñado a mano alzada utilizando esmaltes orgánicos de alta densidad. Constelaciones y figuras astronómicas en un fondo nude semi-mate de alta retención.',
         image: 'https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=800',
-        tech: 'Esmaltado Permanente',
-        dur: '1h 20min'
+        tech: 'Esmaltado Permanente Gel',
+        duration: '1h 20m'
       },
       'port-3': {
         title: 'Glow Natural "Clean Girl"',
         category: 'Maquillaje',
-        description: 'Maquillaje de rostro ultraligero que simula una piel desnuda, brillante y sumamente hidratada. Uso de productos hipoalergénicos cremosos premium y toque labial hidratante.',
+        description: 'Maquillaje de sutileza extrema utilizando primers hidratantes e iluminadores cremosos premium para dar un acabado "piel mojada" blindado, sintonizado con tu personalidad.',
         image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800',
-        tech: 'Piel Blindada dewy',
-        dur: '1h 10min'
+        tech: 'Piel Blindada y Dewy HD',
+        duration: '1h 10m'
       },
       'port-4': {
-        title: 'Look Impacto de Eventos',
-        category: 'Maquillaje de Gala',
-        description: 'Maquillaje para eventos de noche o bodas, estructurado con delineados limpios de ala y difuminados románticos en colores rose-gold. Blindaje térmico de maquillaje de alta retención.',
+        title: 'Look Radiante de Gala',
+        category: 'Look Nocturno',
+        description: 'Maquillaje sofisticado para eventos nocturnos de alta retención térmica. Difuminados rose-gold en ojos, delineado limpio de párpados y pestañas ultra-livianas de seda.',
         image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&q=80&w=800',
-        tech: 'Soft Rose-Gold HD',
-        dur: '1h 30min'
+        tech: 'Smokey Rose-Gold',
+        duration: '1h 30m'
       }
     };
 
-    // 1. Lightbox logic
-    function openLightbox(id) {
-      const item = portfolioData[id];
-      if (!item) return;
-
-      document.getElementById('lightbox-img').src = item.image;
-      document.getElementById('lightbox-badge').innerText = item.category;
-      document.getElementById('lightbox-title').innerText = item.title;
-      document.getElementById('lightbox-desc').innerText = item.description;
-      document.getElementById('lightbox-tech').innerText = item.tech;
-      document.getElementById('lightbox-dur').innerText = item.dur;
-
-      // Map action button to set form service
-      const formServiceSelect = document.getElementById('form-service');
-      document.getElementById('lightbox-action-btn').onclick = function() {
-        if (item.category === 'Maquillaje' || item.category === 'Maquillaje de Gala') {
-          formServiceSelect.value = 'Maquillaje Profesional';
-        } else {
-          formServiceSelect.value = 'Manicura Profesional';
-        }
-        closeLightbox();
-        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-      };
-
-      document.getElementById('lightbox-modal').classList.remove('hidden');
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox-modal').classList.add('hidden');
-    }
-
-    // 2. Services Filter logic
-    function filterCategory(cat) {
-      // Toggle button states
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => {
-        btn.className = "filter-btn px-5 py-2 rounded-full text-xs font-medium tracking-wide transition-all uppercase bg-white hover:bg-pink-50/40 text-studio-gray border border-pink-100/20";
-      });
-      event.target.className = "filter-btn active-filter px-5 py-2 rounded-full text-xs font-medium tracking-wide transition-all uppercase bg-pink-100 text-pink-700 shadow-sm border border-pink-200/50";
-
-      // Filter cards
-      const cards = document.querySelectorAll('.service-card');
-      cards.forEach(card => {
-        if (cat === 'todos' || card.getAttribute('data-category') === cat) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    function bookSpecificService(title) {
-      document.getElementById('form-service').value = title;
-      document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // 3. Carousel Testimonials logic
-    let currentIndex = 0;
-    const track = document.getElementById('testimonial-slider-track');
-    const totalSlides = 3;
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Auto sliding interval for testimonials
-    setInterval(nextSlide, 7000);
-
-    // 4. Appointment Form Confirmation to WhatsApp
-    function confirmAppointment(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('form-name').value;
-      const service = document.getElementById('form-service').value;
-      const whatsapp = document.getElementById('form-whatsapp').value;
-      const date = document.getElementById('form-date').value;
-      const time = document.getElementById('form-time').value;
-      const appointmentId = 'BK-' + Math.floor(100000 + Math.random() * 900000);
-
-      const bookingDetails = {
-        name,
-        service,
-        whatsapp,
-        date,
-        time,
-        id: appointmentId
-      };
-
-      // Set Whatsapp text API link
-      const textMsg = `¡Hola Nails & Makeup Studio! 🌟 Me gustaría confirmar mi cita reservada:
-      
-👤 *Nombre:* ${name}
-💅 *Servicio:* ${service}
-📅 *Fecha:* ${date}
-⏰ *Hora:* _${time}_
-📝 *Nro de Cita:* ${appointmentId}
-
-¡Muchas gracias! Espero mi momento de belleza. 💕`;
-
-      const studioPhone = '5491136458742'; // Mock premium Salon Phone
-      const waUrl = `https://wa.me/${studioPhone}?text=${encodeURIComponent(textMsg)}`;
-
-      // Show success container below form
-      const successBox = document.getElementById('booking-success-box');
-      const whatsappBtn = document.getElementById('whatsapp-sender-btn');
-      
-      whatsappBtn.href = waUrl;
-      successBox.classList.remove('hidden');
-
-      // Clear simple elements for resetting
-      document.getElementById('form-name').value = '';
-      document.getElementById('form-date').value = '';
-      document.getElementById('form-time').value = '';
-      document.getElementById('form-whatsapp').value = '';
-
-      successBox.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // 5. 3D Tilt Card Premium Interaction for Desktop
+    // Card Hover 3D interactive tilt
     const tiltElements = document.querySelectorAll('[data-tilt="true"]');
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     
@@ -1168,20 +1048,193 @@
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
           
-          const maxDeg = 6;
-          const rotateX = ((centerY - y) / centerY) * maxDeg;
-          const rotateY = ((x - centerX) / centerX) * maxDeg;
+          const rotateX = ((centerY - y) / centerY) * 10;
+          const rotateY = ((x - centerX) / centerX) * 10;
           
-          el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
-          el.style.boxShadow = `${rotateY * -1}px ${rotateX}px 24px rgba(212, 185, 198, 0.35)`;
+          el.style.transform = "perspective(1000px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg) scale3d(1.02, 1.02, 1.02)";
         });
         
         el.addEventListener('mouseleave', () => {
           el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-          el.style.boxShadow = '';
         });
       });
     }
+
+    // Lightbox modal logic
+    function openItemLightbox(id) {
+      const data = portfolioItems[id];
+      if (!data) return;
+
+      document.getElementById('modal-image').src = data.image;
+      document.getElementById('modal-title').innerText = data.title;
+      document.getElementById('modal-category').innerText = data.category;
+      document.getElementById('modal-description').innerText = data.description;
+      document.getElementById('modal-tech').innerText = data.tech;
+      document.getElementById('modal-duration').innerText = data.duration;
+
+      // Map button
+      const actBtn = document.getElementById('modal-action-btn');
+      actBtn.onclick = function() {
+        if (data.category.includes('Maquillaje') || data.category.includes('Look')) {
+          selectServiceForBooking('Maquillaje Profesional');
+        } else {
+          selectServiceForBooking('Manicura Profesional');
+        }
+        closeItemLightbox();
+      };
+
+      document.getElementById('item-dialog-modal').classList.remove('hidden');
+    }
+
+    function closeItemLightbox() {
+      document.getElementById('item-dialog-modal').classList.add('hidden');
+    }
+
+    // Category filtering
+    function applyServiceFilter(category, button) {
+      // Reset filter button styles
+      const btns = document.querySelectorAll('#services-filters button');
+      btns.forEach(b => {
+        b.className = "px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-white hover:bg-pink-50/50 text-gray-650 border border-pink-100/40";
+      });
+
+      button.className = "px-5 py-2.5 rounded-full text-[11px] font-extrabold uppercase tracking-widest transition-all bg-pink-100 text-pink-700 border border-pink-200 shadow-xs";
+
+      // Toggle cards
+      const cards = document.querySelectorAll('.service-card');
+      cards.forEach(c => {
+        if (category === 'todos' || c.getAttribute('data-category') === category) {
+          c.classList.remove('hidden');
+        } else {
+          c.classList.add('hidden');
+        }
+      });
+    }
+
+    // Click booking inside cards
+    function selectServiceForBooking(title) {
+      document.getElementById('form-service').value = title;
+      document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+      triggerTicketUpdate();
+    }
+
+    // Claim promo discount integration
+    function claimPromoDiscount() {
+      selectServiceForBooking('Manicura Profesional');
+      alert("¡Código RELAX10 pre-aplicado! 🎉 Elige tu fecha y hora preferida de lunes a miércoles.");
+    }
+
+    // Live Ticket update loop
+    const formNameInput = document.getElementById('form-name');
+    const formServiceSelect = document.getElementById('form-service');
+    const formWhatsappInput = document.getElementById('form-whatsapp');
+    const formDateInput = document.getElementById('form-date');
+    const formTimeSelect = document.getElementById('form-time');
+
+    function triggerTicketUpdate() {
+      const nameVal = formNameInput.value;
+      const serviceVal = formServiceSelect.value;
+      const whatsappVal = formWhatsappInput.value;
+      const dateVal = formDateInput.value;
+      const timeVal = formTimeSelect.value;
+
+      const hasContent = nameVal || serviceVal || whatsappVal || dateVal || timeVal;
+      const ticketBox = document.getElementById('live-ticket-container');
+
+      if (hasContent) {
+        ticketBox.classList.remove('hidden');
+      } else {
+        ticketBox.classList.add('hidden');
+      }
+
+      toggleTicketRow('ticket-item-name', 'ticket-val-name', nameVal);
+      toggleTicketRow('ticket-item-service', 'ticket-val-service', serviceVal);
+      toggleTicketRow('ticket-item-date', 'ticket-val-date', dateVal);
+      toggleTicketRow('ticket-item-time', 'ticket-val-time', timeVal);
+      toggleTicketRow('ticket-item-whatsapp', 'ticket-val-whatsapp', whatsappVal);
+    }
+
+    function toggleTicketRow(itemId, valId, val) {
+      const itemRow = document.getElementById(itemId);
+      const textSpan = document.getElementById(valId);
+      if (val) {
+        textSpan.innerText = val;
+        itemRow.classList.remove('hidden');
+        itemRow.classList.add('flex');
+      } else {
+        itemRow.classList.add('hidden');
+        itemRow.classList.remove('flex');
+      }
+    }
+
+    // Register active listeners
+    formNameInput.addEventListener('input', triggerTicketUpdate);
+    formServiceSelect.addEventListener('change', triggerTicketUpdate);
+    formWhatsappInput.addEventListener('input', triggerTicketUpdate);
+    formDateInput.addEventListener('input', triggerTicketUpdate);
+    formTimeSelect.addEventListener('change', triggerTicketUpdate);
+
+    // Book local appointment submit action
+    function executeAppointmentWeb(e) {
+      e.preventDefault();
+      
+      const name = formNameInput.value;
+      const service = formServiceSelect.value;
+      const whatsapp = formWhatsappInput.value;
+      const date = formDateInput.value;
+      const time = formTimeSelect.value;
+      const codeId = 'BK-' + Math.floor(100000 + Math.random() * 900000);
+
+      const msg = "¡Hola Nails & Makeup Studio! 🌟 Me gustaría confirmar mi cita reservada:
+
+" +
+                  "👥 *Nombre:* " + name + "
+" +
+                  "💅 *Servicio:* " + service + "
+" +
+                  "📅 *Fecha:* " + date + "
+" +
+                  "⏰ *Hora:* _" + time + "_
+" +
+                  "📝 *Nro de Cita:* " + codeId + "
+
+" +
+                  "¡Muchas gracias! Espero mi momento de belleza premium. 💕";
+
+      const studioPhone = '5491136458742';
+      const url = "https://wa.me/" + studioPhone + "?text=" + encodeURIComponent(msg);
+
+      // Show success container
+      const successDiv = document.getElementById('booking-success-box');
+      const whBtn = document.getElementById('whatsapp-sender-btn');
+      
+      whBtn.href = url;
+      successDiv.classList.remove('hidden');
+
+      // Clear standard fields
+      formNameInput.value = '';
+      formDateInput.value = '';
+      formTimeSelect.value = '';
+      formWhatsappInput.value = '';
+
+      successDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Carousel Slider Testimonial
+    let testimonialIdx = 0;
+    const trackSlider = document.getElementById('testimonial-slider-track');
+    
+    function nextTestimonial() {
+      testimonialIdx = (testimonialIdx + 1) % 3;
+      trackSlider.style.transform = "translateX(-" + (testimonialIdx * 100) + "%)";
+    }
+    
+    function prevTestimonial() {
+      testimonialIdx = (testimonialIdx - 1 + 3) % 3;
+      trackSlider.style.transform = "translateX(-" + (testimonialIdx * 100) + "%)";
+    }
+
+    setInterval(nextTestimonial, 8000);
   </script>
 </body>
 </html>
